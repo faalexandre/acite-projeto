@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descobrir a ACITE — Academia de Ciências Sociais e Tecnologias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="assets/css/languages.css">
+  <script src="assets/js/languages.js" defer></script>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+
+  <!-- Barra de contactos -->
+  <div class="flex min-h-[46px] flex-wrap items-center justify-center gap-x-7 gap-y-2 bg-[#0d1832] px-5 py-2 text-xs text-white md:justify-center md:px-8">
+    <span class="whitespace-nowrap">Tem alguma questão?</span>
+    <a class="whitespace-nowrap transition-colors hover:text-blue-300" href="tel:+24492336822">
+      +244 92336822 / 92336855
+    </a>
+    <a class="inline-flex items-center gap-3 whitespace-nowrap transition-colors hover:text-blue-300" href="mailto:s.academia@acite.ao">
+      <i class="fa-regular fa-envelope text-blue-300" aria-hidden="true"></i>
+      s.academia@acite.ao
+    </a>
+    <a class="inline-flex items-center gap-3 whitespace-nowrap transition-colors hover:text-blue-300" href="pages/cursos/index.html">
+      <i class="fa-regular fa-user text-blue-300" aria-hidden="true"></i>
+      Inscrições
+    </a>
+  </div>
+
+  <!-- Header / Nav -->
+  <section class="hero" aria-labelledby="home-title">
+    <header class="header">
+      <a href="index.html" class="brand" aria-label="ACITE — página inicial">
+        <img src="assets/logo/logo.png" alt="Logótipo da ACITE">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-navigation">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav class="main-nav" id="main-navigation" aria-label="Menu principal">
+        <a href="pages/institucional/index.html">INSTITUCIONAL</a>
+        <a href="pages/investigacao/index.html">INVESTIGAÇÃO</a>
+        <a href="pages/cursos/index.html">CURSOS</a>
+        <a href="pages/extensao/index.html">EXTENSÃO</a>
+        <a href="pages/estudantes/index.html">ESTUDANTES</a>
+        <a href="#noticias">NOTÍCIAS</a>
+        <a href="pages/eventos/index.html">EVENTOS</a>
+        <a href="pages/contactos/index.html">CONTACTOS</a>
+      </nav>
+    </header>
+    <div class="hero-content">
+      <h1 id="home-title">Escolher a ACITE</h1>
+      <div class="hero-options" aria-label="Acesso rápido">
+        <div class="hero-choice">
+          <button class="hero-option" type="button" aria-expanded="false" aria-controls="acite-choice-menu">
+            Conhecer a ACITE <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <nav class="hero-choice-menu" id="acite-choice-menu" aria-label="Conheça a ACITE">
+            <a href="pages/mensagem-reitor/index.html">Mensagem do Reitor</a>
+            <a href="pages/sobre/index.html">Sobre</a>
+            <a href="pages/nossa-historia/index.html">Nossa História</a>
+            <a href="pages/organizacao/index.html#laboratorios-parceiros">Cooperação</a>
+            <a href="pages/estrutura/index.html">Estrutura</a>
+          </nav>
+        </div>
+        <div class="hero-choice">
+          <button class="hero-option" type="button" aria-expanded="false" aria-controls="formation-choice-menu">
+            Encontrar uma formação <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <nav class="hero-choice-menu" id="formation-choice-menu" aria-label="Escolher uma formação">
+            <a href="pages/detalhes-formacoes/index.html#mestrados">Mestrado</a>
+            <a href="pages/detalhes-formacoes/index.html#doutoramentos">Doutoramento</a>
+            <a href="pages/detalhes-formacoes/index.html#linguas">Línguas</a>
+            <a href="pages/detalhes-formacoes/index.html#especializacoes">Especialização</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html">ACITE</a> <span>›</span> Descobrir a ACITE
+  </div>
+
+  <main class="main-container" aria-label="Conheça a ACITE">
+    <a class="navigation-card" href="index.html" aria-label="Escolher a ACITE: voltar à página inicial">
+      <i class="fa-solid fa-compass" aria-hidden="true"></i>
+      <h2>Escolher a ACITE</h2>
+      <p>Descubra a academia e encontre a informação de que precisa.</p>
+      <span>Descobrir <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+    </a>
+    <a class="navigation-card" href="pages/organizacao/index.html">
+      <i class="fa-solid fa-sitemap" aria-hidden="true"></i>
+      <h2>Organização</h2>
+      <p>Consulte os órgãos, departamentos e serviços da ACITE.</p>
+      <span>Conhecer a estrutura <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+    </a>
+    <a class="navigation-card" href="pages/cursos/index.html">
+      <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+      <h2>Cursos</h2>
+      <p>Explore as formações disponíveis e os respetivos detalhes.</p>
+      <span>Ver formações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+    </a>
+    <a class="navigation-card" href="pages/compromissos/index.html">
+      <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
+      <h2>Compromissos</h2>
+      <p>Conheça os compromissos institucionais da academia.</p>
+      <span>Ver compromissos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+    </a>
+    <a class="navigation-card" href="pages/candidatura/index.html">
+      <i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+      <h2>Candidaturas</h2>
+      <p>Prepare os dados e documentos para a sua candidatura.</p>
+      <span>Iniciar candidatura <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+    </a>
+    <a class="navigation-card" href="pages/perfil-docente/index.html">
+      <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>
+      <h2>Docentes</h2>
+      <p>Consulte informação académica e curricular dos docentes.</p>
+      <span>Ver perfil docente <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+    </a>
+  </main>
+
+  <section class="news-section" id="noticias" aria-labelledby="news-title">
+    <div class="news-heading">
+      <h2 id="news-title">Últimas notícias</h2>
+      <div class="news-controls">
+        <button class="news-control" type="button" data-news-previous aria-label="Notícia anterior">
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button class="news-control" type="button" data-news-next aria-label="Notícia seguinte">
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <div class="news-viewport" aria-live="polite">
+      <div class="news-track">
+        <article class="news-card" data-news-index="0">
+          <div class="news-visual stored-photo-visual">
+            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            <input class="news-photo-input stored-photo-input" id="news-photo-0" data-photo-id="news-photo-0" type="file" accept="image/*" aria-label="Selecionar foto para notícia sobre o concurso">
+            <label class="news-photo-action stored-photo-action" for="news-photo-0">Adicionar foto</label>
+          </div>
+          <div class="news-copy">
+            <h3>Abertura de concurso para o provimento de 15 vagas na categoria de Professor Auxiliar</h3>
+            <p>Consulte o anúncio de abertura do concurso público para o provimento de quinze vagas.</p>
+            <p class="news-photo-status stored-photo-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="news-card" data-news-index="1">
+          <div class="news-visual stored-photo-visual">
+            <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
+            <input class="news-photo-input stored-photo-input" id="news-photo-1" data-photo-id="news-photo-1" type="file" accept="image/*" aria-label="Selecionar foto para notícia sobre auto-avaliação">
+            <label class="news-photo-action stored-photo-action" for="news-photo-1">Adicionar foto</label>
+          </div>
+          <div class="news-copy">
+            <h3>ACITE informa sobre o processo de auto-avaliação institucional</h3>
+            <p>No âmbito da implementação do Sistema Nacional de Garantia da Qualidade, a ACITE informa a comunidade académica sobre o processo.</p>
+            <p class="news-photo-status stored-photo-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="news-card" data-news-index="2">
+          <div class="news-visual stored-photo-visual">
+            <i class="fa-solid fa-earth-africa" aria-hidden="true"></i>
+            <input class="news-photo-input stored-photo-input" id="news-photo-2" data-photo-id="news-photo-2" type="file" accept="image/*" aria-label="Selecionar foto para notícia sobre as negociações regionais na SADC">
+            <label class="news-photo-action stored-photo-action" for="news-photo-2">Adicionar foto</label>
+          </div>
+          <div class="news-copy">
+            <h3>Professor da ACITE publica estudo sobre Angola e as negociações regionais na SADC</h3>
+            <p>O Professor Doutor José Abel Moma, da Academia, publica estudo sobre Angola e as negociações regionais na SADC.</p>
+            <p class="news-photo-status stored-photo-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="news-pagination" aria-label="Escolher notícia">
+      <button class="news-dot" type="button" data-news-dot="0" aria-label="Notícia 1" aria-current="true"></button>
+      <button class="news-dot" type="button" data-news-dot="1" aria-label="Notícia 2" aria-current="false"></button>
+      <button class="news-dot" type="button" data-news-dot="2" aria-label="Notícia 3" aria-current="false"></button>
+    </div>
+  </section>
+
+  <section class="publications-section" id="obras-publicadas" aria-labelledby="publications-title">
+    <div class="publications-inner">
+      <h2 class="publications-title" id="publications-title">Obras publicadas na ACITE</h2>
+      <div class="publication-grid">
+        <article class="publication-card" data-photo-card>
+          <div class="publication-cover stored-photo-visual">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <a class="publication-author-link" href="pages/autor-publicacao/index.html#obra-bibiana">Ver autor</a>
+            <input class="publication-photo-input stored-photo-input" id="publication-photo-0" data-photo-id="publication-photo-0" type="file" accept="image/*" aria-label="Selecionar capa da obra Metodologia, Métodos e Técnicas de Investigação">
+            <label class="publication-photo-action stored-photo-action" for="publication-photo-0">Adicionar capa</label>
+          </div>
+          <div class="publication-copy">
+            <h3>Metodologia, Métodos e Técnicas de Investigação: Conceitos, Modelos e Práticas</h3>
+            <p>Bibiana J. C. Cateco Gomes</p>
+            <p class="publication-photo-status stored-photo-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="publication-card" data-photo-card>
+          <div class="publication-cover stored-photo-visual">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <a class="publication-author-link" href="pages/autor-publicacao/index.html#obra-celeste">Ver autor</a>
+            <input class="publication-photo-input stored-photo-input" id="publication-photo-1" data-photo-id="publication-photo-1" type="file" accept="image/*" aria-label="Selecionar capa da obra A Relevância das Práticas Pedagógicas no Processo de Formação Inicial de Professores">
+            <label class="publication-photo-action stored-photo-action" for="publication-photo-1">Adicionar capa</label>
+          </div>
+          <div class="publication-copy">
+            <h3>A Relevância das Práticas Pedagógicas no Processo de Formação Inicial de Professores: Algumas Contribuições</h3>
+            <p>Celeste Ana da Glória Eduardo Sambeny</p>
+            <p class="publication-photo-status stored-photo-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="publication-card" data-photo-card>
+          <div class="publication-cover stored-photo-visual">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <a class="publication-author-link" href="pages/autor-publicacao/index.html#obra-gabriel">Ver autor</a>
+            <input class="publication-photo-input stored-photo-input" id="publication-photo-2" data-photo-id="publication-photo-2" type="file" accept="image/*" aria-label="Selecionar capa da obra Cobertura e Representação Mediáticas do Discurso de João Lourenço e das Ações Políticas do Governo Angolano">
+            <label class="publication-photo-action stored-photo-action" for="publication-photo-2">Adicionar capa</label>
+          </div>
+          <div class="publication-copy">
+            <h3>Cobertura e Representação Mediáticas do Discurso de João Lourenço e das Ações Políticas do Governo Angolano, em Portugal e Angola (2017–2020)</h3>
+            <p>Gabriel Benguela “Ngombo”</p>
+            <p class="publication-photo-status stored-photo-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="publication-card" data-photo-card>
+          <div class="publication-cover stored-photo-visual">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <a class="publication-author-link" href="pages/autor-publicacao/index.html#obra-ze-grande">Ver autor</a>
+            <input class="publication-photo-input stored-photo-input" id="publication-photo-3" data-photo-id="publication-photo-3" type="file" accept="image/*" aria-label="Selecionar capa da obra O Tráfico de Armas Ligeiras">
+            <label class="publication-photo-action stored-photo-action" for="publication-photo-3">Adicionar capa</label>
+          </div>
+          <div class="publication-copy">
+            <h3>O Tráfico de Armas Ligeiras: Implicações para a Paz e a Segurança na Região dos Grandes Lagos</h3>
+            <p>José Luís Caetano Higino de Sousa “Zé Grande”</p>
+            <p class="publication-photo-status stored-photo-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="publication-card" data-photo-card>
+          <div class="publication-cover stored-photo-visual">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <a class="publication-author-link" href="pages/autor-publicacao/index.html#obra-5">Ver autor</a>
+            <input class="publication-photo-input stored-photo-input" id="publication-photo-4" data-photo-id="publication-photo-4" type="file" accept="image/*" aria-label="Selecionar capa da quinta obra publicada">
+            <label class="publication-photo-action stored-photo-action" for="publication-photo-4">Adicionar capa</label>
+          </div>
+          <div class="publication-copy">
+            <h3>Obra publicada a adicionar</h3>
+            <p>Autor a definir</p>
+            <p class="publication-photo-status stored-photo-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="publication-card" data-photo-card>
+          <div class="publication-cover stored-photo-visual">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <a class="publication-author-link" href="pages/autor-publicacao/index.html#obra-6">Ver autor</a>
+            <input class="publication-photo-input stored-photo-input" id="publication-photo-5" data-photo-id="publication-photo-5" type="file" accept="image/*" aria-label="Selecionar capa da sexta obra publicada">
+            <label class="publication-photo-action stored-photo-action" for="publication-photo-5">Adicionar capa</label>
+          </div>
+          <div class="publication-copy">
+            <h3>Obra publicada a adicionar</h3>
+            <p>Autor a definir</p>
+            <p class="publication-photo-status stored-photo-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="publication-card" data-photo-card>
+          <div class="publication-cover stored-photo-visual">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <a class="publication-author-link" href="pages/autor-publicacao/index.html#obra-7">Ver autor</a>
+            <input class="publication-photo-input stored-photo-input" id="publication-photo-6" data-photo-id="publication-photo-6" type="file" accept="image/*" aria-label="Selecionar capa da sétima obra publicada">
+            <label class="publication-photo-action stored-photo-action" for="publication-photo-6">Adicionar capa</label>
+          </div>
+          <div class="publication-copy">
+            <h3>Obra publicada a adicionar</h3>
+            <p>Autor a definir</p>
+            <p class="publication-photo-status stored-photo-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>ACITE</h4>
+        <p class="page-inline-1">
+          Academia de Ciências Sociais e Tecnologias<br>
+          Instituição Pública de Ensino Superior<br>
+          Belas, Luanda — Angola
+        </p>
+        <a href="pages/contactos/index.html" class="page-inline-2">Todos os contactos →</a>
+      </div>
+      <div class="footer-col">
+        <h4>Espaços</h4>
+        <ul>
+          <li><a href="#">Internacional</a></li>
+          <li><a href="#">Candidatos</a></li>
+          <li><a href="pages/estudantes/index.html">Estudantes</a></li>
+          <li><a href="#">Antigos Alunos (Alumni)</a></li>
+          <li><a href="#">Imprensa</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Acessos Diretos</h4>
+        <ul>
+          <li><a href="pages/contactos/index.html">Contactos</a></li>
+          <li><a href="#">Anuário</a></li>
+          <li><a href="#">Mercados Públicos</a></li>
+          <li><a href="#">Planos de Ação</a></li>
+          <li><a href="#">Recrutamento</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informações Legais</h4>
+        <ul>
+          <li><a href="#">Menções Legais</a></li>
+          <li><a href="#">Proteção de Dados</a></li>
+          <li><a href="#">Acessibilidade</a></li>
+          <li><a href="#">Mapa do Site</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 ACITE. Todos os direitos reservados.</div>
+      <div>
+        <a href="#" class="page-inline-3">Créditos</a> · 
+        <a href="#" class="page-inline-4">Menções Legais</a> · 
+        <a href="#" class="page-inline-5">Mapa do Site</a>
+      </div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>

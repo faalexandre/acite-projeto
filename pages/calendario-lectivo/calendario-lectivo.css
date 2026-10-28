@@ -1,0 +1,22 @@
+:root { --navy: #102b45; --red: #c8102e; --text: #263746; --muted: #61717e; --line: #dce3e8; --pale: #f4f7f9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--text); font-family: 'Noto Sans', sans-serif; line-height: 1.7; }
+    a { color: inherit; }
+    header, main, footer { padding-right: max(1.25rem, calc((100% - 1120px) / 2)); padding-left: max(1.25rem, calc((100% - 1120px) / 2)); }
+    header { display: flex; min-height: 72px; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    header a { color: var(--navy); font-weight: 700; text-decoration: none; }
+    .hero { display: grid; min-height: 270px; place-items: center; padding: 2rem 1.25rem; background: linear-gradient(90deg, rgba(13,24,50,.78), rgba(13,24,50,.45)), url('../../assets/img/banner-acite.png') center/cover; color: #fff; text-align: center; }
+    h1, h2 { font-family: 'Noto Serif', serif; }
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 3rem); }
+    .breadcrumb { padding-top: .8rem; padding-bottom: .8rem; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+    .breadcrumb a { color: var(--red); text-decoration: none; }
+    main { max-width: 1120px; padding-top: 2.5rem; padding-bottom: 3.5rem; }
+    .calendar-panel { max-width: 860px; margin: 0 auto; }
+    .calendar-panel h2 { margin: 0 0 1rem; color: var(--navy); font-size: 1.65rem; }
+    .notice { padding: 1.25rem 1.5rem; border-left: 4px solid var(--red); background: var(--pale); }
+    .notice p { margin: 0; }
+    .contact { margin-top: 1.25rem; }
+    .contact a { color: var(--red); font-weight: 700; }
+    footer { padding-top: 1.25rem; padding-bottom: 1.25rem; border-top: 1px solid var(--line); background: var(--pale); color: var(--muted); text-align: center; font-size: .9rem; }
+    footer p { margin: .2rem 0; }
+    footer a { color: var(--navy); font-weight: 700; text-decoration: none; }

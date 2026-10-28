@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulte por grau e área as informações orientativas sobre as formações da ACITE.">
+  <title>Detalhes das Formações — ACITE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  
+  <link rel="stylesheet" href="../../assets/css/languages.css">
+  <script src="../../assets/js/languages.js" defer></script>
+  <link rel="stylesheet" href="detalhes-formacoes.css">
+  <script src="detalhes-formacoes.js" defer></script>
+</head>
+<body>
+  <div class="utility-bar">
+    <span class="utility-question">Tem alguma questão?</span>
+    <a href="tel:+24492336822"><i class="fa-solid fa-phone" aria-hidden="true"></i>+244 923 368 22 / 923 368 55</a>
+    <a href="mailto:s.academia@acite.ao"><i class="fa-regular fa-envelope" aria-hidden="true"></i>s.academia@acite.ao</a>
+    <a href="#candidaturas"><i class="fa-regular fa-user" aria-hidden="true"></i>Candidaturas</a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="ACITE — página inicial">
+      <img src="../../assets/logo/logo.png" alt="Logótipo da ACITE">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-navigation">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+    <nav class="main-nav" id="main-navigation" aria-label="Menu principal">
+      <a href="../institucional/index.html">Institucional</a>
+      <a href="../investigacao/index.html">Investigação</a>
+      <a href="../cursos/index.html" aria-current="page">Cursos</a>
+      <a href="../extensao/index.html">Extensão</a>
+      <a href="../estudantes/index.html">Estudantes</a>
+      <a href="../cursos/index.html#oferta">Notícias</a>
+      <a href="#candidaturas">Eventos</a>
+      <a href="../contactos/index.html">Contactos</a>
+    </nav>
+    <a class="header-action" href="#candidaturas"><i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>Inscrições</a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Catálogo de formações</p>
+        <h1 id="page-title">Formações por grau e área</h1>
+      </div>
+    </section>
+
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+      <a href="../../index.html">ACITE</a><span aria-hidden="true">›</span>
+      <a href="../cursos/index.html">Cursos</a><span aria-hidden="true">›</span>
+      <span aria-current="page">Detalhes das formações</span>
+    </nav>
+
+    <section class="catalog" aria-labelledby="catalog-title">
+      <div class="intro">
+        <h2 id="catalog-title">Explore as áreas de formação</h2>
+        <p>Abra uma categoria e selecione uma área para consultar informações de orientação e falar com a Secretaria Académica.</p>
+      </div>
+
+      <aside class="catalog-note">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        <span>As áreas abaixo servem de orientação e não confirmam, por si só, a abertura de um curso. A oferta, os requisitos de acesso, os planos curriculares e os prazos devem ser confirmados junto da Secretaria Académica.</span>
+      </aside>
+
+      <label class="catalog-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <span class="sr-only">Pesquisar por grau ou área</span>
+        <input id="catalog-query" type="search" placeholder="Pesquisar por grau ou área" autocomplete="off">
+      </label>
+
+      <div id="degree-catalog">
+        <details class="degree-group" id="mestrados" data-search="mestrado mestrados segundo ciclo pós-graduação">
+          <summary>Mestrado</summary>
+          <div class="degree-content">
+            <p class="degree-description">Formação avançada para aprofundar conhecimentos e desenvolver competências especializadas ou de investigação.</p>
+            <details class="subject-item" data-search="ciências sociais investigação">
+              <summary>Ciências Sociais e Investigação</summary>
+              <div class="subject-details">
+                <p><strong>Foco de estudo:</strong> aprofundamento de temas sociais e desenvolvimento de competências de investigação.</p>
+                <p><strong>Informações a confirmar:</strong> cursos disponíveis, requisitos académicos, plano curricular e calendário.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Mestrado%20em%20Ci%C3%AAncias%20Sociais">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+            <details class="subject-item" data-search="administração gestão políticas públicas">
+              <summary>Administração e Gestão</summary>
+              <div class="subject-details">
+                <p><strong>Foco de estudo:</strong> gestão institucional, administração e análise de organizações.</p>
+                <p><strong>Informações a confirmar:</strong> cursos disponíveis, requisitos académicos, plano curricular e calendário.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Mestrado%20em%20Gest%C3%A3o">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+            <details class="subject-item" data-search="tecnologias sistemas digitais">
+              <summary>Tecnologias e Sistemas Digitais</summary>
+              <div class="subject-details">
+                <p><strong>Foco de estudo:</strong> aprofundamento de conhecimentos em tecnologia e transformação digital.</p>
+                <p><strong>Informações a confirmar:</strong> cursos disponíveis, requisitos académicos, plano curricular e calendário.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Mestrado%20em%20Tecnologias">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+          </div>
+        </details>
+
+        <details class="degree-group" id="doutoramentos" data-search="doutoramento doutoramentos terceiro ciclo direito segurança estudos estratégicos">
+          <summary>Doutoramento</summary>
+          <div class="degree-content">
+            <p class="degree-description">Consulte os dois cursos de doutoramento disponíveis na ACITE.</p>
+            <details class="subject-item" data-search="direito segurança">
+              <summary>Doutoramento em Direito e Segurança</summary>
+              <div class="subject-details">
+                <div class="strategic-course-layout">
+                  <div class="strategic-course-main">
+                    <div class="strategic-video" role="img" aria-label="Área reservada ao vídeo explicativo do curso">
+                      <div>
+                        <i class="fa-regular fa-circle-play" aria-hidden="true"></i>
+                        <h4>Vídeo explicativo</h4>
+                        <p>O vídeo será disponibilizado em breve.</p>
+                      </div>
+                    </div>
+                    <div class="strategic-copy">
+                      <p>Os desafios crescentes no domínio da segurança dos Estados e dos cidadãos, ante ao aumento, sem precedentes, dos níveis de ameaças ao desenvolvimento político e económico, sobretudo derivados do terrorismo, da criminalidade organizada e dos conflitos violentos, levantam uma série de preocupações relacionadas com a legalidade e a legitimidade da acção dos poderes dos Estados.</p>
+                      <p>A complexidade destas questões exige ampla capacidade de compreensão e interpretação dos fenómenos políticos, económicos, sociais e tecnológicos, a nível local, regional e global, em que, frequentemente, relacionam-se diferentes actores, sendo imprescindível, para tal, uma orientação concernente à intersecção entre o Direito e a Segurança.</p>
+                      <p>O Doutoramento em Direito e Segurança possui uma natureza interdisciplinar e pretende combinar particularmente os recursos teóricos e metodológicos das ciências sociais aplicadas, tendo como objectivo analisar diferentes temáticas em que se relacionam o Direito e a Segurança. O curso é aprovado pelo Decreto Executivo n.º 184/24, de 22 de Outubro, do MESCTI.</p>
+                      <p>Este curso conta com um corpo docente nacional de elevada qualidade e experiência profissional, bem como professores portugueses e brasileiros de grande prestígio e reputação internacional.</p>
+                    </div>
+
+                    <section class="strategic-info-section" aria-labelledby="law-entry-title">
+                      <h4 id="law-entry-title">Perfil de entrada</h4>
+                      <p>Os candidatos ao doutoramento em Direito e Segurança devem ter:</p>
+                      <ul>
+                        <li>Mestrado na área das Ciências Sociais e Humanas, designadamente em Direito, Ciências Políticas, Ciências Policiais ou Criminais, Ciências Militares, Antropologia, Sociologia, Psicologia Social ou áreas equivalentes, com nota mínima de 14 valores;</li>
+                        <li>Domínio da língua inglesa (desejável).</li>
+                      </ul>
+                    </section>
+
+                    <section class="strategic-info-section" aria-labelledby="law-research-title">
+                      <h4 id="law-research-title">Linhas de investigação</h4>
+                      <p>Os projectos a serem apresentados pelos candidatos ao doutoramento em Direito e Segurança devem ser elaborados numa abordagem interdisciplinar, de acordo com as seguintes linhas de investigação:</p>
+                      <ul>
+                        <li>Direito e Segurança Regional e Internacional;</li>
+                        <li>Estado, Poder, Direito, Sociedade e Segurança;</li>
+                        <li>Sistema de Justiça Criminal, Direito e Segurança;</li>
+                        <li>Direito, Defesa e Segurança Nacional;</li>
+                        <li>Estratégia, Direito, Inteligência e Segurança Nacional.</li>
+                      </ul>
+                      <p class="strategic-note"><strong>Nota:</strong> Os projectos e os CV devem ser entregues impressos e encadernados em três (3) exemplares.</p>
+                    </section>
+
+                    <section class="strategic-info-section" aria-labelledby="law-outcome-title">
+                      <h4 id="law-outcome-title">Perfil de saída</h4>
+                      <p>Concluído o curso, o formado adquire as seguintes competências:</p>
+                      <ul>
+                        <li>Capacidade de análise de desafios complexos e das dinâmicas jurídicas e de segurança, a nível nacional, regional e internacional;</li>
+                        <li>Capacidade de análise de riscos, ameaças e vulnerabilidades em matéria de segurança, a nível nacional e internacional;</li>
+                        <li>Concepção e orientação de trabalhos académicos e científicos na área de Direito e de Segurança;</li>
+                        <li>Habilidades de investigar diferentes processos e fenómenos associados ao Direito e à Segurança dos Estados e das Comunidades;</li>
+                        <li>Habilidades de concepção e gestão de projectos de investigação científica, desenvolvimento e inovação;</li>
+                        <li>Conhecimentos científicos aprofundados para responder aos desafios relacionados com as novas formas de criminalidade;</li>
+                        <li>Domínio da metodologia e da epistemologia das ciências sociais e humanas.</li>
+                      </ul>
+                    </section>
+                  </div>
+
+                  <aside class="strategic-sidebar" aria-label="Características do curso">
+                    <h4>Características do curso</h4>
+                    <dl class="course-features">
+                      <div><dt><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Aulas</dt><dd>0</dd></div>
+                      <div><dt><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i> Quizzes</dt><dd>0</dd></div>
+                      <div><dt><i class="fa-regular fa-clock" aria-hidden="true"></i> Duração</dt><dd>4 anos</dd></div>
+                      <div><dt><i class="fa-solid fa-chart-column" aria-hidden="true"></i> Nível</dt><dd>Todos os níveis</dd></div>
+                      <div><dt><i class="fa-solid fa-language" aria-hidden="true"></i> Idioma</dt><dd>Português / Inglês</dd></div>
+                      <div><dt><i class="fa-solid fa-user-group" aria-hidden="true"></i> Estudantes</dt><dd>30</dd></div>
+                      <div><dt><i class="fa-regular fa-square-check" aria-hidden="true"></i> Avaliações</dt><dd>Autónomas</dd></div>
+                    </dl>
+                  </aside>
+                </div>
+                <p>Plano de estudo do curso organizado por ano e semestre:</p>
+                <section class="study-plan" aria-label="Plano de estudo do Doutoramento em Direito e Segurança">
+                  <h4>Plano de estudo do curso</h4>
+                  <div class="study-years">
+                    <section class="study-year" aria-labelledby="year-one">
+                      <h5 id="year-one">1.º ano</h5>
+                      <p>Unidades curriculares</p>
+                      <div class="semester">
+                        <h6>1.º semestre</h6>
+                        <ul>
+                          <li>Metodologia de Investigação Avançada;</li>
+                          <li>Estudos Securitários;</li>
+                          <li>Direito, Política e Sociedade;</li>
+                          <li>Direito Constitucional, Administrativo e Segurança.</li>
+                        </ul>
+                      </div>
+                      <div class="semester">
+                        <h6>2.º semestre</h6>
+                        <ul>
+                          <li>Segurança Nacional e Estado de Direito;</li>
+                          <li>Direito Internacional e Segurança;</li>
+                          <li>Direito Penal e Política Criminal;</li>
+                          <li>Globalização e Geopolítica.</li>
+                        </ul>
+                      </div>
+                    </section>
+                    <section class="study-year" aria-labelledby="year-two">
+                      <h5 id="year-two">2.º ano</h5>
+                      <p>Unidades curriculares</p>
+                      <div class="semester">
+                        <h6>1.º semestre</h6>
+                        <ul>
+                          <li>Seminário sobre o Pluralismo Jurídico;</li>
+                          <li>Seminário sobre Sistemas de Segurança em África;</li>
+                          <li>Seminário de Cybersecurity e Inteligência Artificial;</li>
+                          <li>Tópicos de Direito Público e Estudos Políticos.</li>
+                        </ul>
+                      </div>
+                      <div class="semester">
+                        <h6>2.º semestre</h6>
+                        <ul>
+                          <li>Métodos Quantitativos e Qualitativos aplicados às Ciências Sociais;</li>
+                          <li>Estatística Aplicada às Ciências Sociais;</li>
+                          <li>Técnica de Redação Científica;</li>
+                          <li>Seminário de Investigação Científica e Elaboração da Tese I.</li>
+                        </ul>
+                      </div>
+                    </section>
+                    <section class="study-year" aria-labelledby="year-three">
+                      <h5 id="year-three">3.º ano</h5>
+                      <p>Unidades curriculares</p>
+                      <div class="semester">
+                        <h6>1.º semestre</h6>
+                        <ul>
+                          <li>Seminário de Investigação Científica e Elaboração da Tese II.</li>
+                        </ul>
+                      </div>
+                      <div class="semester">
+                        <h6>2.º semestre</h6>
+                        <ul>
+                          <li>Seminário de Investigação Científica e Elaboração da Tese III.</li>
+                        </ul>
+                      </div>
+                    </section>
+                    <section class="study-year" aria-labelledby="year-four">
+                      <h5 id="year-four">4.º ano</h5>
+                      <p>Unidades curriculares</p>
+                      <div class="semester">
+                        <h6>1.º semestre</h6>
+                        <ul>
+                          <li>Seminário de Investigação Científica e Elaboração da Tese IV.</li>
+                        </ul>
+                      </div>
+                      <div class="semester">
+                        <h6>2.º semestre</h6>
+                        <ul>
+                          <li>Elaboração e Defesa da Tese.</li>
+                        </ul>
+                      </div>
+                    </section>
+                  </div>
+                  <p class="study-plan-note">Plano transcrito a partir da imagem fornecida. Confirme a versão em vigor junto da Secretaria Académica.</p>
+                </section>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Doutoramento%20em%20Direito%20e%20Seguran%C3%A7a">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+            <details class="subject-item" data-search="estudos estratégicos segurança">
+              <summary>Doutoramento em Estudos Estratégicos e de Segurança</summary>
+              <div class="subject-details">
+                <div class="strategic-course-layout">
+                  <div class="strategic-course-main">
+                    <div class="strategic-video" role="img" aria-label="Área reservada ao vídeo explicativo do curso">
+                      <div>
+                        <i class="fa-regular fa-circle-play" aria-hidden="true"></i>
+                        <h4>Vídeo explicativo</h4>
+                        <p>O vídeo será disponibilizado em breve.</p>
+                      </div>
+                    </div>
+                    <div class="strategic-copy">
+                      <p>O Curso de Doutoramento em Estudos Estratégicos e de Segurança da ACITE procura responder aos grandes desafios da complexidade do mundo globalizado no quadro de segurança, bem como proporcionar conhecimentos teóricos e práticos aprofundados sobre os fenómenos políticos e securitários.</p>
+                      <p>O curso integra os Estudos de Segurança, mas possui uma natureza interdisciplinar, combinando recursos teóricos e metodológicos da Ciência Política, da Estratégia e das Relações Internacionais com as Novas Tecnologias de Informação e Comunicação.</p>
+                      <p>O curso possui uma natureza teórico-prática e uma orientação estritamente profissional, contando com corpo docente nacional de elevada qualidade e experiência profissional, oriundo de instituições de Defesa e Segurança e dos sectores político-diplomático. Conta igualmente com um corpo docente estrangeiro de elevada qualidade e experiência profissional, proveniente de instituições de grande prestígio e reputação internacional.</p>
+                    </div>
+
+                    <section class="strategic-info-section" aria-labelledby="strategic-entry-title">
+                      <h4 id="strategic-entry-title">Perfil de entrada</h4>
+                      <p>Os candidatos ao doutoramento em Estudos Estratégicos e de Segurança devem ter:</p>
+                      <ul>
+                        <li>Mestrado na área das Ciências Sociais e Humanas, designadamente Ciência Política, Relações Internacionais, Ciências Políticas ou Criminais, Direito, Ciências Militares, Sociologia, História, Geografia, Administração Pública, Comunicação Social ou áreas equivalentes, com nota mínima de 14 valores;</li>
+                        <li>Domínio da língua inglesa (desejável).</li>
+                      </ul>
+                    </section>
+
+                    <section class="strategic-info-section" aria-labelledby="strategic-research-title">
+                      <h4 id="strategic-research-title">Linhas de investigação</h4>
+                      <p>Os projectos a serem apresentados pelos candidatos devem ser elaborados numa abordagem interdisciplinar, com ênfase nos Estudos Africanos e de acordo com as seguintes linhas de investigação:</p>
+                      <ul>
+                        <li>Estado, Poder e Segurança;</li>
+                        <li>Geoeconomia, Desenvolvimento e Segurança;</li>
+                        <li>Geopolítica, Geoestratégia e Desafios Globais Contemporâneos;</li>
+                        <li>Democracia, Estado de Direito e Segurança Nacional.</li>
+                      </ul>
+                      <p class="strategic-note"><strong>Nota:</strong> Os projectos e os CV devem ser entregues impressos e encadernados em três (3) exemplares.</p>
+                    </section>
+
+                    <section class="strategic-info-section" aria-labelledby="strategic-outcome-title">
+                      <h4 id="strategic-outcome-title">Perfil de saída</h4>
+                      <p>Concluído o curso, o formado adquire as seguintes competências:</p>
+                      <ul>
+                        <li>Capacidade de análise crítica de questões relacionadas com estratégia e segurança;</li>
+                        <li>Capacidade de análise de riscos, ameaças e vulnerabilidades em matéria de segurança, a nível nacional e internacional;</li>
+                        <li>Concepção de estudos relacionados com fenómenos globais e de desenvolvimento, em particular para o contexto africano, assim como a sua articulação com os demais continentes;</li>
+                        <li>Concepção e orientação de trabalhos académicos e científicos na área de estudos estratégicos e de segurança;</li>
+                        <li>Habilidade de investigar fenómenos associados à geoestratégia e geopolítica;</li>
+                        <li>Habilidades de concepção e gestão de projectos de investigação científica, desenvolvimento e inovação;</li>
+                        <li>Domínio da metodologia de epistemologia das ciências sociais e humanas.</li>
+                      </ul>
+                    </section>
+                  </div>
+
+                  <aside class="strategic-sidebar" aria-label="Características do curso">
+                    <h4>Características do curso</h4>
+                    <dl class="course-features">
+                      <div><dt><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Aulas</dt><dd>0</dd></div>
+                      <div><dt><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i> Quizzes</dt><dd>0</dd></div>
+                      <div><dt><i class="fa-regular fa-clock" aria-hidden="true"></i> Duração</dt><dd>4 anos</dd></div>
+                      <div><dt><i class="fa-solid fa-chart-column" aria-hidden="true"></i> Nível</dt><dd>Todos os níveis</dd></div>
+                      <div><dt><i class="fa-solid fa-language" aria-hidden="true"></i> Idioma</dt><dd>Português / Inglês</dd></div>
+                      <div><dt><i class="fa-solid fa-user-group" aria-hidden="true"></i> Estudantes</dt><dd>27</dd></div>
+                      <div><dt><i class="fa-regular fa-square-check" aria-hidden="true"></i> Avaliações</dt><dd>Autónomas</dd></div>
+                    </dl>
+                  </aside>
+                </div>
+
+                <p>Plano de estudo do curso organizado por ano e semestre:</p>
+                <section class="study-plan" aria-label="Plano de estudo do Doutoramento em Estudos Estratégicos e de Segurança">
+                  <h4>Plano de estudo do curso</h4>
+                  <div class="study-years">
+                    <section class="study-year" aria-labelledby="strategic-year-one">
+                      <h5 id="strategic-year-one">1.º ano</h5>
+                      <p>Unidades curriculares</p>
+                      <div class="semester">
+                        <h6>1.º semestre</h6>
+                        <ul>
+                          <li>Metodologia de Investigação Avançada;</li>
+                          <li>Estudos Securitários;</li>
+                          <li>Estudos Estratégicos: Teoria e Métodos;</li>
+                          <li>Análise Geopolítica.</li>
+                        </ul>
+                      </div>
+                      <div class="semester">
+                        <h6>2.º semestre</h6>
+                        <ul>
+                          <li>Segurança e Inteligência Estratégica;</li>
+                          <li>Geoeconomia e Geofinanças;</li>
+                          <li>Estratégias Nacionais Africana;</li>
+                          <li>Poder Militar.</li>
+                        </ul>
+                      </div>
+                    </section>
+                    <section class="study-year" aria-labelledby="strategic-year-two">
+                      <h5 id="strategic-year-two">2.º ano</h5>
+                      <p>Unidades curriculares</p>
+                      <div class="semester">
+                        <h6>1.º semestre</h6>
+                        <ul>
+                          <li>Seminário de Estudos Políticos Estratégicos;</li>
+                          <li>Seminário de Planeamento Estratégico;</li>
+                          <li>Seminário de Liderança, Governança e Tomada de Decisão Estratégica;</li>
+                          <li>Seminário de Sistema de Segurança em África.</li>
+                        </ul>
+                      </div>
+                      <div class="semester">
+                        <h6>2.º semestre</h6>
+                        <ul>
+                          <li>Métodos Quantitativos e Qualitativos Aplicados às Ciências Sociais;</li>
+                          <li>Estatística Aplicada às Ciências Sociais;</li>
+                          <li>Técnica de Redação Científica;</li>
+                          <li>Seminário de Investigação Científica e Elaboração da Tese I.</li>
+                        </ul>
+                      </div>
+                    </section>
+                    <section class="study-year" aria-labelledby="strategic-year-three">
+                      <h5 id="strategic-year-three">3.º ano</h5>
+                      <p>Unidades curriculares</p>
+                      <div class="semester">
+                        <h6>1.º semestre</h6>
+                        <ul><li>Seminário de Investigação Científica e Elaboração da Tese II.</li></ul>
+                      </div>
+                      <div class="semester">
+                        <h6>2.º semestre</h6>
+                        <ul><li>Seminário de Investigação Científica e Elaboração da Tese III.</li></ul>
+                      </div>
+                    </section>
+                    <section class="study-year" aria-labelledby="strategic-year-four">
+                      <h5 id="strategic-year-four">4.º ano</h5>
+                      <p>Unidades curriculares</p>
+                      <div class="semester">
+                        <h6>1.º semestre</h6>
+                        <ul><li>Seminário de Investigação Científica e Elaboração da Tese IV.</li></ul>
+                      </div>
+                      <div class="semester">
+                        <h6>2.º semestre</h6>
+                        <ul><li>Elaboração e Defesa da Tese.</li></ul>
+                      </div>
+                    </section>
+                  </div>
+                  <p class="study-plan-note">Plano transcrito a partir das imagens fornecidas. Confirme a versão em vigor junto da Secretaria Académica.</p>
+                </section>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Doutoramento%20em%20Estudos%20Estrat%C3%A9gicos%20e%20de%20Seguran%C3%A7a">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+          </div>
+        </details>
+
+        <details class="degree-group" id="especializacoes" data-search="especialização especializações cursos formação contínua aperfeiçoamento">
+          <summary>Especialização</summary>
+          <div class="degree-content">
+            <p class="degree-description">Formação orientada para a atualização profissional e o aprofundamento de competências em áreas específicas.</p>
+            <details class="subject-item" data-search="cibersegurança gestão segurança informação">
+              <summary>Cibersegurança e Gestão de Segurança da Informação</summary>
+              <div class="subject-details">
+                <p>Para informações sobre esta especialização, contacte a Secretaria Académica.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Ciberseguran%C3%A7a%20e%20Gest%C3%A3o%20de%20Seguran%C3%A7a%20da%20Informa%C3%A7%C3%A3o">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+            <details class="subject-item" data-search="administração gestão financeira pública">
+              <summary>Administração e Gestão Financeira Pública</summary>
+              <div class="subject-details">
+                <p>Para informações sobre esta especialização, contacte a Secretaria Académica.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Administra%C3%A7%C3%A3o%20e%20Gest%C3%A3o%20Financeira%20P%C3%BAblica">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+            <details class="subject-item" data-search="intelligence estudos segurança">
+              <summary>Intelligence e Estudos de Segurança</summary>
+              <div class="subject-details">
+                <p>Para informações sobre esta especialização, contacte a Secretaria Académica.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Intelligence%20e%20Estudos%20de%20Seguran%C3%A7a">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+            <details class="subject-item" data-search="inteligência económica financeira">
+              <summary>Inteligência Económica e Financeira</summary>
+              <div class="subject-details">
+                <p>Para informações sobre esta especialização, contacte a Secretaria Académica.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Intelig%C3%AAncia%20Econ%C3%B3mica%20e%20Financeira">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+            <details class="subject-item" data-search="comunicação estratégica digital">
+              <summary>Comunicação Estratégica e Digital</summary>
+              <div class="subject-details">
+                <p>Para informações sobre esta especialização, contacte a Secretaria Académica.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Comunica%C3%A7%C3%A3o%20Estrat%C3%A9gica%20e%20Digital">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+            <details class="subject-item" data-search="ciberespaço estado">
+              <summary>Ciberespaço e Estado</summary>
+              <div class="subject-details">
+                <p>Para informações sobre esta especialização, contacte a Secretaria Académica.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Ciberespa%C3%A7o%20e%20Estado">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+          </div>
+        </details>
+
+        <details class="degree-group" id="linguas" data-search="línguas linguas idiomas cursos">
+          <summary>Línguas</summary>
+          <div class="degree-content">
+            <p class="degree-description">Consulte a Secretaria Académica para conhecer os idiomas, níveis e turmas disponíveis no período em curso.</p>
+            <details class="subject-item" data-search="lingala línguas idiomas">
+              <summary>Lingala</summary>
+              <div class="subject-details">
+                <div class="strategic-course-layout">
+                  <div class="strategic-course-main">
+                    <div class="strategic-video" role="img" aria-label="Área reservada ao vídeo explicativo do curso de Lingala">
+                      <div>
+                        <i class="fa-regular fa-circle-play" aria-hidden="true"></i>
+                        <h4>Vídeo explicativo</h4>
+                        <p>O vídeo será disponibilizado em breve.</p>
+                      </div>
+                    </div>
+                    <div class="strategic-copy">
+                      <h4>Descrição</h4>
+                      <p>O curso de língua Lingala está inserido na área de formação e investigação em línguas estrangeiras. Pertence ao grupo das línguas bantu e procura responder aos grandes desafios regionais, proporcionando conhecimentos teóricos, práticos, contextualizados e aprofundados aos formandos que pretendam aumentar os seus conhecimentos.</p>
+
+                      <h4>Requisitos</h4>
+                      <p>Para se inscrever neste curso, é necessário submeter a seguinte documentação:</p>
+                      <ul>
+                        <li>Cópia do Bilhete de Identidade;</li>
+                        <li>Ficha de Inscrição;</li>
+                        <li>Comprovativo de pagamento da taxa de inscrição.</li>
+                      </ul>
+
+                      <h4>Perfil de entrada</h4>
+                      <p>Não é necessário ter domínio da língua para aceder ao curso. O candidato será submetido a um exame de aferição de conhecimentos, para determinar o seu nível e permitir o seu enquadramento numa das turmas.</p>
+
+                      <h4>Perfil de saída</h4>
+                      <p>Após a conclusão do curso, espera-se que o formando consiga:</p>
+                      <ul>
+                        <li>Desenvolver e consolidar a capacidade de compreensão e de expressão oral;</li>
+                        <li>Alargar e adaptar o vocabulário às diferentes situações comunicativas;</li>
+                        <li>Aprofundar o conhecimento e o domínio das estruturas discursivas, gramaticais e lexicais.</li>
+                      </ul>
+
+                      <h4>Mais informações</h4>
+                      <p>O curso tem a duração de três meses por nível, num total de seis níveis, e é ministrado duas vezes por semana, com uma carga horária de duas horas por dia.</p>
+                      <p>A matrícula é feita presencialmente na Secretaria Académica da ACITE, pelo formando ou pela instituição responsável, dentro dos prazos estabelecidos para o teste de aferição. Pode ser anulada pelo estudante ou pela instituição responsável antes ou durante o curso, mediante requerimento dirigido à Coordenação do CEL. A anulação interrompe a contagem do tempo de estudo e não dá lugar à devolução dos emolumentos pagos.</p>
+                      <p>Tem mais perguntas? Envie um e-mail para <a href="mailto:s.academia@acite.ao">s.academia@acite.ao</a> ou ligue para <a href="tel:+244934200824">(+244) 934 200 824</a>.</p>
+                      <p><strong>Preparado para se inscrever?</strong> <a href="mailto:s.academia@acite.ao?subject=Inscri%C3%A7%C3%A3o%20no%20curso%20de%20Lingala">Candidate-se agora <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+                    </div>
+                  </div>
+                  <aside class="strategic-sidebar" aria-label="Características do curso de Lingala">
+                    <h4>Características do curso</h4>
+                    <dl class="course-features">
+                      <div><dt><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Aulas</dt><dd>0</dd></div>
+                      <div><dt><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i> Testes</dt><dd>0</dd></div>
+                      <div><dt><i class="fa-regular fa-clock" aria-hidden="true"></i> Duração</dt><dd>3 meses / nível</dd></div>
+                      <div><dt><i class="fa-solid fa-chart-column" aria-hidden="true"></i> Níveis</dt><dd>6 níveis</dd></div>
+                      <div><dt><i class="fa-solid fa-language" aria-hidden="true"></i> Língua</dt><dd>Lingala</dd></div>
+                      <div><dt><i class="fa-solid fa-user-group" aria-hidden="true"></i> Estudantes</dt><dd>0</dd></div>
+                      <div><dt><i class="fa-regular fa-square-check" aria-hidden="true"></i> Avaliação</dt><dd>Autoavaliação</dd></div>
+                    </dl>
+                  </aside>
+                </div>
+              </div>
+            </details>
+            <h3 class="language-group-heading">Outras línguas</h3>
+            <details class="subject-item" data-search="swahili suaíli línguas idiomas">
+              <summary>Swahili</summary>
+              <div class="subject-details">
+                <p>Para informações sobre este curso de língua, contacte a Secretaria Académica.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Swahili">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+            <details class="subject-item" data-search="francês frances línguas idiomas">
+              <summary>Francês</summary>
+              <div class="subject-details">
+                <p>Para informações sobre este curso de língua, contacte a Secretaria Académica.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Franc%C3%AAs">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+            <details class="subject-item" data-search="inglês ingles línguas idiomas">
+              <summary>Inglês</summary>
+              <div class="subject-details">
+                <p>Para informações sobre este curso de língua, contacte a Secretaria Académica.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Ingl%C3%AAs">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+            <details class="subject-item" data-search="português portugues línguas idiomas">
+              <summary>Português</summary>
+              <div class="subject-details">
+                <p>Para informações sobre este curso de língua, contacte a Secretaria Académica.</p>
+                <a href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%A3o%20sobre%20Portugu%C3%AAs">Pedir informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </details>
+          </div>
+        </details>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>Não encontrámos áreas correspondentes. Tente outra pesquisa.</p>
+      <p class="sr-only" id="search-status" aria-live="polite"></p>
+    </section>
+
+    <section class="help-band" id="candidaturas" aria-label="Contactar a Secretaria Académica">
+      <div class="help-inner">
+        <div>
+          <h2>Precisa de mais informações?</h2>
+          <p>Confirme a oferta atual, os requisitos e os prazos diretamente com a Secretaria Académica.</p>
+        </div>
+        <a class="help-link" href="mailto:s.academia@acite.ao?subject=Informa%C3%A7%C3%B5es%20sobre%20forma%C3%A7%C3%B5es">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>Contactar a Secretaria
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <section class="footer-col">
+        <h2>ACITE</h2>
+        <p>Academia de Ciências Sociais e Tecnologias</p>
+        <p>Instituição Pública de Ensino Superior<br>Belas, Luanda — Angola</p>
+        <a href="../contactos/index.html">Todos os contactos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </section>
+      <section class="footer-col">
+        <h2>Formações</h2>
+        <ul>
+          <li><a href="#mestrados">Mestrado</a></li>
+          <li><a href="#doutoramentos">Doutoramento</a></li>
+          <li><a href="#especializacoes">Especializações</a></li>
+          <li><a href="#linguas">Línguas</a></li>
+        </ul>
+      </section>
+      <section class="footer-col">
+        <h2>Acessos diretos</h2>
+        <ul>
+          <li><a href="../institucional/index.html">Institucional</a></li>
+          <li><a href="../cursos/index.html">Cursos</a></li>
+          <li><a href="#candidaturas">Candidaturas</a></li>
+        </ul>
+      </section>
+      <section class="footer-col">
+        <h2>Contactos</h2>
+        <ul>
+          <li><a href="tel:+24492336822">+244 923 368 22</a></li>
+          <li><a href="mailto:s.academia@acite.ao">s.academia@acite.ao</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ACITE. Todos os direitos reservados.</span>
+      <span>Academia de Ciências Sociais e Tecnologias</span>
+    </div>
+  </footer>
+
+  
+
+  
+
+</body>
+</html>

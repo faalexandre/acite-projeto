@@ -1,0 +1,36 @@
+:root { --navy: #102b45; --red: #c8102e; --text: #263746; --muted: #61717e; --line: #dce3e8; --pale: #f4f7f9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--text); font-family: 'Noto Sans', sans-serif; line-height: 1.7; }
+    a { color: var(--red); }
+    header, main, footer { padding-right: max(1.25rem, calc((100% - 1120px) / 2)); padding-left: max(1.25rem, calc((100% - 1120px) / 2)); }
+    header { display: flex; min-height: 72px; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    header a { color: var(--navy); font-weight: 700; text-decoration: none; }
+    .hero { display: grid; min-height: 250px; place-items: center; padding: 2rem 1.25rem; background: linear-gradient(90deg, rgba(13,24,50,.78), rgba(13,24,50,.45)), url('../../assets/img/banner-acite.png') center/cover; color: #fff; text-align: center; }
+    h1, h2, h3 { font-family: 'Noto Serif', serif; }
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 3rem); }
+    .breadcrumb { padding-top: .8rem; padding-bottom: .8rem; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+    .breadcrumb a { text-decoration: none; }
+    main { max-width: 1120px; padding-top: 2.5rem; padding-bottom: 3.5rem; }
+    .content { width: 100%; max-width: 960px; margin: 0 auto; }
+    .source-note { margin: 0 auto 2.5rem; padding: 1.25rem 1.5rem; border-left: 4px solid var(--red); background: var(--pale); }
+    .source-note { text-align: center; }
+    .source-note p { margin: 0; }
+    .accordion-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; }
+    .info-accordion { border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+    .info-accordion > summary { position: relative; display: flex; min-height: 76px; align-items: center; justify-content: center; gap: 1rem; padding: 1.25rem 2.75rem; color: var(--navy); font-weight: 700; text-align: center; cursor: pointer; list-style: none; }
+    .info-accordion > summary::-webkit-details-marker { display: none; }
+    .info-accordion > summary::after { position: absolute; right: 1rem; content: "+"; color: var(--red); font-size: 1.35rem; line-height: 1; }
+    .info-accordion[open] > summary { border-bottom: 1px solid var(--line); }
+    .info-accordion[open] > summary::after { content: "-"; }
+    .info-accordion > summary:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+    .accordion-content { padding: 1.25rem 1.4rem 1.5rem; text-align: center; }
+    .accordion-content ul { display: inline-block; max-width: 100%; padding-left: 1.25rem; text-align: left; }
+    .fee { text-align: center; }
+    .accordion-content h3 { margin: 1.5rem 0 .75rem; color: var(--navy); font-size: 1.08rem; }
+    .accordion-content p { margin: 1rem 0; line-height: 1.85; }
+    .accordion-content li { margin: .75rem 0; line-height: 1.75; }
+    .fee { padding: .85rem 1rem; background: var(--pale); font-weight: 700; }
+    footer { padding-top: 1.25rem; padding-bottom: 1.25rem; border-top: 1px solid var(--line); background: var(--pale); color: var(--muted); text-align: center; font-size: .9rem; }
+    footer p { margin: .2rem 0; }
+    footer a { color: var(--navy); font-weight: 700; text-decoration: none; }
+    @media (max-width: 760px) { .accordion-grid { grid-template-columns: 1fr; } }

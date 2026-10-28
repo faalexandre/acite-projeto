@@ -1,0 +1,305 @@
+:root {
+      --primary: #1B2A4A;
+      --accent: #C8102E;
+      --text: #333;
+      --muted: #666;
+      --border: #E5E7EB;
+      --surface: #F8F9FA;
+    }
+    * { box-sizing: border-box; }
+    i { display: inline-block; line-height: 1; vertical-align: -0.1em; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: 'Noto Sans', sans-serif;
+      line-height: 1.6;
+    }
+    h1, h2, h3 { font-family: 'Noto Serif', serif; }
+    .site-header {
+      display: flex;
+      min-height: 140px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 0.5rem 2.2rem;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+    }
+    .brand { display: flex; width: 130px; flex-shrink: 0; justify-content: center; }
+    .brand img { display: block; width: 98px; height: 98px; object-fit: contain; }
+    .main-nav {
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .main-nav a {
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--primary); }
+    .menu-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      background: #fff;
+      color: var(--primary);
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    .hero {
+      display: flex;
+      min-height: 250px;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: linear-gradient(rgba(27, 42, 74, 0.72), rgba(27, 42, 74, 0.72)), url('../../assets/img/banner-acite.png') center/cover;
+      text-align: center;
+    }
+    .hero h1 { margin: 0; color: #fff; font-size: clamp(2rem, 5vw, 3rem); }
+    .section-title::after {
+      display: block;
+      width: 42px;
+      height: 3px;
+      margin: 0.75rem auto 0;
+      background: var(--accent);
+      content: "";
+    }
+    .org-chart { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+    .chart-level {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+    }
+    .chart-connector {
+      width: 2px;
+      height: 32px;
+      margin: 0 auto;
+      background: #cbd5e1;
+    }
+    .chart-branches {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+      padding-top: 1px;
+    }
+    .chart-branches::before {
+      position: absolute;
+      top: 0;
+      right: calc(16.666% + 0.625rem);
+      left: calc(16.666% + 0.625rem);
+      height: 2px;
+      background: #cbd5e1;
+      content: "";
+    }
+    .chart-branch { position: relative; padding-top: 32px; }
+    .chart-branch::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 32px;
+      background: #cbd5e1;
+      content: "";
+    }
+    .org-card {
+      height: 100%;
+      padding: 1.4rem;
+      border: 1px solid var(--border);
+      border-top: 4px solid #24658a;
+      border-radius: 0.65rem;
+      background: #fff;
+      box-shadow: 0 5px 18px rgba(16, 43, 69, 0.07);
+      text-align: center;
+    }
+    .org-card--lead {
+      width: min(100%, 440px);
+      border-top-color: var(--accent);
+      background: var(--primary);
+      color: #fff;
+    }
+    .org-card i { margin-bottom: 0.75rem; color: #24658a; font-size: 1.5rem; }
+    .org-card--lead i { color: #fff; }
+    .org-card h2, .org-card h3 { margin: 0 0 0.45rem; color: var(--primary); font-size: 1.1rem; }
+    .org-card--lead h2 { color: #fff; font-size: 1.3rem; }
+    .org-card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+    .org-card--lead p { color: #e5eaf1; }
+    .breadcrumb-link { color: var(--accent); text-decoration: none; }
+    .breadcrumb-link:hover { text-decoration: underline; }
+    .faculty-section { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+    .faculty-accordion { margin-top: 1rem; border: 1px solid var(--border); border-radius: 0.65rem; background: #fff; }
+    .faculty-accordion > summary {
+      display: flex;
+      min-height: 68px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      border-radius: 0.65rem;
+      color: var(--primary);
+      cursor: pointer;
+      font-weight: 700;
+      list-style: none;
+    }
+    .faculty-accordion > summary::-webkit-details-marker { display: none; }
+    .faculty-accordion > summary::after {
+      color: var(--accent);
+      content: "+";
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    .faculty-accordion[open] > summary { border-bottom: 1px solid var(--border); border-radius: 0.65rem 0.65rem 0 0; }
+    .faculty-accordion[open] > summary::after { content: "−"; }
+    .faculty-accordion > summary:focus-visible { outline: 3px solid rgba(36, 101, 138, 0.3); outline-offset: 2px; }
+    .faculty-accordion-content { padding: 0 1rem 1rem; }
+    .faculty-timeline {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem 2rem;
+      margin-top: 2.5rem;
+    }
+    .faculty-timeline::before {
+      position: absolute;
+      top: 1rem;
+      bottom: 1rem;
+      left: 50%;
+      width: 2px;
+      background: #dbe4eb;
+      content: "";
+      transform: translateX(-50%);
+    }
+    .faculty-entry {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem;
+      border: 1px solid var(--border);
+      border-radius: 0.65rem;
+      background: #fff;
+      box-shadow: 0 5px 18px rgba(16, 43, 69, 0.06);
+      text-align: center;
+    }
+    .faculty-entry .faculty-photo-area {
+      width: min(100%, 220px);
+      border: 0;
+      background: transparent;
+    }
+    .faculty-entry .faculty-photo-placeholder { width: 132px; height: 132px; }
+    .faculty-entry .faculty-content { width: 100%; }
+    .faculty-profile-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      margin-top: 0.9rem;
+      padding: 0.7rem 1rem;
+      border-radius: 0.35rem;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 160ms ease;
+    }
+    .faculty-profile-link:hover { background: #24658a; }
+    .faculty-entry::before {
+      position: absolute;
+      top: 1.6rem;
+      right: -1.25rem;
+      z-index: 1;
+      width: 0.7rem;
+      height: 0.7rem;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      background: var(--accent);
+      content: "";
+      box-shadow: 0 0 0 2px #dbe4eb;
+    }
+    .faculty-entry:nth-child(even)::before { right: auto; left: -1.25rem; }
+    .faculty-photo-area {
+      display: flex;
+      min-height: 128px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.65rem;
+      border: 1px dashed #b8c6d0;
+      border-radius: 0.5rem;
+      background: var(--surface);
+      text-align: center;
+    }
+    .faculty-photo-placeholder {
+      display: grid;
+      width: 70px;
+      height: 70px;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 50%;
+      background: #e6eef3;
+      color: #24658a;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+    .faculty-photo-placeholder:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .faculty-photo-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+    .faculty-photo-area label {
+      color: var(--primary);
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .faculty-photo-area input { width: 1px; height: 1px; opacity: 0; }
+    .faculty-photo-area input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .faculty-photo-status { min-height: 1.2em; margin: 0; color: var(--muted); font-size: 0.68rem; line-height: 1.35; }
+    .faculty-photo-status[data-state="error"] { color: #a90d27; }
+    .faculty-photo-status[data-state="success"] { color: #24613b; }
+    .faculty-content h3 { margin: 0 0 0.2rem; color: var(--primary); font-family: 'Noto Sans', sans-serif; font-size: 1rem; }
+    .faculty-role { margin: 0 0 0.65rem; color: var(--muted); font-size: 0.78rem; }
+    .faculty-note { margin: 1.5rem 0 0; color: var(--muted); font-size: 0.82rem; text-align: center; }
+    @media (max-width: 900px) {
+      .site-header { flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; padding: 1rem; }
+      .brand { width: auto; }
+      .menu-toggle { display: inline-flex; order: 2; }
+      .main-nav {
+        display: none;
+        order: 4;
+        flex: 0 0 100%;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 0.4rem 0;
+        border-top: 1px solid var(--border);
+      }
+      .site-header.menu-open .main-nav { display: flex; }
+      .main-nav a { padding: 0.65rem 0.25rem; border-bottom: 1px solid var(--border); }
+      .chart-branches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .chart-branches::before { display: none; }
+      .chart-branch::before { top: 0; height: 32px; }
+      .chart-branch { padding-top: 32px; }
+      .faculty-timeline { grid-template-columns: 1fr; }
+      .faculty-timeline::before { left: 0.35rem; }
+      .faculty-entry, .faculty-entry:nth-child(even) { margin-left: 1.1rem; }
+      .faculty-entry::before, .faculty-entry:nth-child(even)::before { right: auto; left: -1.55rem; }
+    }
+    @media (max-width: 600px) {
+      .chart-branches { grid-template-columns: 1fr; gap: 0.75rem; }
+      .chart-branch { padding-top: 20px; }
+      .chart-branch::before { height: 20px; }
+      .chart-connector { display: none; }
+      .org-card { padding: 1.15rem; }
+      .faculty-photo-area { min-height: 112px; }
+    }

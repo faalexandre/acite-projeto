@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organização — ACITE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="../../assets/css/languages.css">
+  <script src="../../assets/js/languages.js" defer></script>
+  <link rel="stylesheet" href="organizacao.css">
+  <script src="organizacao.js" defer></script>
+</head>
+<body>
+  <div class="flex min-h-[72px] flex-wrap items-center justify-center gap-x-6 gap-y-2 bg-[#0d1832] px-5 py-4 text-sm text-white md:justify-end md:px-8">
+    <span class="whitespace-nowrap">Tem alguma questão?</span>
+    <a class="whitespace-nowrap transition-colors hover:text-blue-300" href="tel:+24492336822">+244 92336822 / 92336855</a>
+    <a class="inline-flex items-center gap-3 whitespace-nowrap transition-colors hover:text-blue-300" href="mailto:s.academia@acite.ao">
+      <i class="fa-regular fa-envelope text-blue-300" aria-hidden="true"></i>
+      s.academia@acite.ao
+    </a>
+    <a class="inline-flex items-center gap-3 whitespace-nowrap transition-colors hover:text-blue-300" href="../cursos/index.html">
+      <i class="fa-regular fa-user text-blue-300" aria-hidden="true"></i>
+      Inscrições
+    </a>
+  </div>
+
+  <header class="site-header">
+    <a href="../../index.html" class="brand" aria-label="ACITE - página inicial">
+      <img src="../../assets/logo/logo.png" alt="Logo da ACITE">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-navigation">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+    <nav class="main-nav" id="main-navigation" aria-label="Menu principal">
+      <a href="../institucional/index.html" aria-current="page">INSTITUCIONAL</a>
+      <a href="../investigacao/index.html">INVESTIGAÇÃO</a>
+      <a href="../cursos/index.html">CURSOS</a>
+      <a href="../extensao/index.html">EXTENSÃO</a>
+      <a href="../estudantes/index.html">ESTUDANTES</a>
+      <a href="../../index.html#noticias">NOTÍCIAS</a>
+      <a href="../compromissos/index.html">EVENTOS</a>
+      <a href="../contactos/index.html">CONTACTOS</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Organização da ACITE</h1>
+  </section>
+
+  <nav class="border-b border-gray-200 bg-white px-6 py-4 text-sm text-red-700" aria-label="Navegação estrutural">
+    <a class="hover:underline" href="../../index.html">ACITE</a>
+    <span class="mx-2 text-gray-500" aria-hidden="true">›</span>
+    <span class="text-gray-600">Organização</span>
+  </nav>
+
+  <main class="mx-auto max-w-6xl px-6 py-14">
+    <section class="mb-12 text-center">
+      <p class="mb-3 text-sm font-bold uppercase tracking-[0.15em] text-red-700">Institucional</p>
+      <h2 class="section-title mb-5 text-3xl font-bold text-[#1B2A4A]">Conheça a nossa estrutura</h2>
+      <p class="mx-auto max-w-3xl text-gray-600">
+        Consulte os órgãos, departamentos e serviços que fazem parte da organização da ACITE.
+        Selecione um tópico para aceder à respetiva informação.
+      </p>
+    </section>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <a id="organograma" href="../organigrama/index.html" class="org-card rounded-lg border border-gray-200 bg-gray-50 p-6 transition hover:-translate-y-1 hover:border-blue-900 hover:bg-white hover:shadow-md">
+        <i class="fa-solid fa-sitemap mb-4 text-2xl text-blue-900" aria-hidden="true"></i>
+        <h3 class="mb-2 text-lg font-bold text-[#1B2A4A]">Organograma da ACITE</h3>
+        <p class="text-sm text-gray-600">Consulte a estrutura organizacional da instituição.</p>
+      </a>
+      <a id="equipa-reitoral" href="../equipa-reitoral/index.html" class="org-card rounded-lg border border-gray-200 bg-gray-50 p-6 transition hover:-translate-y-1 hover:border-blue-900 hover:bg-white hover:shadow-md">
+        <i class="fa-solid fa-people-group mb-4 text-2xl text-blue-900" aria-hidden="true"></i>
+        <h3 class="mb-2 text-lg font-bold text-[#1B2A4A]">Equipa Reitoral</h3>
+        <p class="text-sm text-gray-600">Conheça a equipa responsável pela direção da ACITE.</p>
+      </a>
+      <a id="referencias-regulamentares" href="#referencias-regulamentares" class="org-card rounded-lg border border-gray-200 bg-gray-50 p-6 transition hover:-translate-y-1 hover:border-blue-900 hover:bg-white hover:shadow-md">
+        <i class="fa-solid fa-scale-balanced mb-4 text-2xl text-blue-900" aria-hidden="true"></i>
+        <h3 class="mb-2 text-lg font-bold text-[#1B2A4A]">Referências e missões regulamentares</h3>
+        <p class="text-sm text-gray-600">Aceda às referências institucionais e às missões regulamentares.</p>
+      </a>
+      <a id="conselhos" href="#conselhos" class="org-card rounded-lg border border-gray-200 bg-gray-50 p-6 transition hover:-translate-y-1 hover:border-blue-900 hover:bg-white hover:shadow-md">
+        <i class="fa-solid fa-users-gear mb-4 text-2xl text-blue-900" aria-hidden="true"></i>
+        <h3 class="mb-2 text-lg font-bold text-[#1B2A4A]">Conselhos</h3>
+        <p class="text-sm text-gray-600">Informação sobre os conselhos Científico e Pedagógico.</p>
+      </a>
+      <a id="departamentos" href="#departamentos" class="org-card rounded-lg border border-gray-200 bg-gray-50 p-6 transition hover:-translate-y-1 hover:border-blue-900 hover:bg-white hover:shadow-md">
+        <i class="fa-solid fa-building-columns mb-4 text-2xl text-blue-900" aria-hidden="true"></i>
+        <h3 class="mb-2 text-lg font-bold text-[#1B2A4A]">Componentes e Departamentos</h3>
+        <p class="text-sm text-gray-600">Explore as componentes e os departamentos da instituição.</p>
+      </a>
+      <a id="servicos" href="#servicos" class="org-card rounded-lg border border-gray-200 bg-gray-50 p-6 transition hover:-translate-y-1 hover:border-blue-900 hover:bg-white hover:shadow-md">
+        <i class="fa-solid fa-headset mb-4 text-2xl text-blue-900" aria-hidden="true"></i>
+        <h3 class="mb-2 text-lg font-bold text-[#1B2A4A]">Serviços da ACITE</h3>
+        <p class="text-sm text-gray-600">Encontre os serviços de apoio e administrativos da ACITE.</p>
+      </a>
+      <a id="laboratorios" href="#laboratorios" class="org-card rounded-lg border border-gray-200 bg-gray-50 p-6 transition hover:-translate-y-1 hover:border-blue-900 hover:bg-white hover:shadow-md">
+        <i class="fa-solid fa-flask mb-4 text-2xl text-blue-900" aria-hidden="true"></i>
+        <h3 class="mb-2 text-lg font-bold text-[#1B2A4A]">Laboratórios de Investigação</h3>
+        <p class="text-sm text-gray-600">Conheça os laboratórios dedicados à investigação.</p>
+      </a>
+      <a id="laboratorios-parceiros" href="#laboratorios-parceiros" class="org-card rounded-lg border border-gray-200 bg-gray-50 p-6 transition hover:-translate-y-1 hover:border-blue-900 hover:bg-white hover:shadow-md">
+        <i class="fa-solid fa-handshake mb-4 text-2xl text-blue-900" aria-hidden="true"></i>
+        <h3 class="mb-2 text-lg font-bold text-[#1B2A4A]">Laboratórios com empresas</h3>
+        <p class="text-sm text-gray-600">Descubra os laboratórios desenvolvidos em parceria com empresas.</p>
+      </a>
+      <a id="protecao-dados" href="#protecao-dados" class="org-card rounded-lg border border-gray-200 bg-gray-50 p-6 transition hover:-translate-y-1 hover:border-blue-900 hover:bg-white hover:shadow-md">
+        <i class="fa-solid fa-shield-halved mb-4 text-2xl text-blue-900" aria-hidden="true"></i>
+        <h3 class="mb-2 text-lg font-bold text-[#1B2A4A]">Proteção de Dados</h3>
+        <p class="text-sm text-gray-600">Consulte informações sobre proteção de dados e RGPD.</p>
+      </a>
+      <a id="calendario" href="../calendario-universitario/index.html" class="org-card rounded-lg border border-gray-200 bg-gray-50 p-6 transition hover:-translate-y-1 hover:border-blue-900 hover:bg-white hover:shadow-md">
+        <i class="fa-regular fa-calendar-days mb-4 text-2xl text-blue-900" aria-hidden="true"></i>
+        <h3 class="mb-2 text-lg font-bold text-[#1B2A4A]">Calendário Académico</h3>
+        <p class="text-sm text-gray-600">Consulte o calendário e as principais datas académicas.</p>
+      </a>
+      <a id="fundacao" href="#fundacao" class="org-card rounded-lg border border-gray-200 bg-gray-50 p-6 transition hover:-translate-y-1 hover:border-blue-900 hover:bg-white hover:shadow-md">
+        <i class="fa-solid fa-landmark mb-4 text-2xl text-blue-900" aria-hidden="true"></i>
+        <h3 class="mb-2 text-lg font-bold text-[#1B2A4A]">Fundação ACITE</h3>
+        <p class="text-sm text-gray-600">Saiba mais sobre a Fundação ACITE e a sua missão.</p>
+      </a>
+    </div>
+  </main>
+
+  <footer class="border-t border-gray-200 bg-gray-50 px-6 py-8 text-center text-sm text-gray-600">
+    <p>© 2026 ACITE. Todos os direitos reservados.</p>
+    <a class="mt-2 inline-block font-semibold text-red-700 hover:underline" href="../../index.html">Voltar à página inicial</a>
+  </footer>
+  
+</body>
+</html>

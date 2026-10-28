@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulte o organograma e as principais áreas da ACITE.">
+  <title>Organograma — ACITE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="../../assets/css/languages.css">
+  <script src="../../assets/js/languages.js" defer></script>
+  <link rel="stylesheet" href="organigrama.css">
+  <script src="organigrama.js" defer></script>
+</head>
+<body>
+  <div class="flex min-h-[72px] flex-wrap items-center justify-center gap-x-6 gap-y-2 bg-[#0d1832] px-5 py-4 text-sm text-white md:justify-center md:px-8">
+    <span class="whitespace-nowrap">Tem alguma questão?</span>
+    <a class="whitespace-nowrap transition-colors hover:text-blue-300" href="tel:+24492336822">+244 92336822 / 92336855</a>
+    <a class="inline-flex items-center gap-3 whitespace-nowrap transition-colors hover:text-blue-300" href="mailto:s.academia@acite.ao">
+      <i class="fa-regular fa-envelope text-blue-300" aria-hidden="true"></i>
+      s.academia@acite.ao
+    </a>
+    <a class="inline-flex items-center gap-3 whitespace-nowrap transition-colors hover:text-blue-300" href="../cursos/index.html">
+      <i class="fa-regular fa-user text-blue-300" aria-hidden="true"></i>
+      Inscrições
+    </a>
+  </div>
+
+  <header class="site-header">
+    <a href="../../index.html" class="brand" aria-label="ACITE - página inicial">
+      <img src="../../assets/logo/logo.png" alt="Logo da ACITE">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-navigation">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+    <nav class="main-nav" id="main-navigation" aria-label="Menu principal">
+      <a href="../institucional/index.html" aria-current="page">INSTITUCIONAL</a>
+      <a href="../investigacao/index.html">INVESTIGAÇÃO</a>
+      <a href="../cursos/index.html">CURSOS</a>
+      <a href="../extensao/index.html">EXTENSÃO</a>
+      <a href="../estudantes/index.html">ESTUDANTES</a>
+      <a href="../../index.html#noticias">NOTÍCIAS</a>
+      <a href="../compromissos/index.html">EVENTOS</a>
+      <a href="../contactos/index.html">CONTACTOS</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Organograma da ACITE</h1>
+  </section>
+
+  <nav class="border-b border-gray-200 bg-white px-6 py-4 text-sm" aria-label="Navegação estrutural">
+    <a class="breadcrumb-link" href="../../index.html">ACITE</a>
+    <span class="mx-2 text-gray-500" aria-hidden="true">›</span>
+    <a class="breadcrumb-link" href="../organizacao/index.html">Organização</a>
+    <span class="mx-2 text-gray-500" aria-hidden="true">›</span>
+    <span class="text-gray-600">Organograma</span>
+  </nav>
+
+  <main class="mx-auto max-w-6xl px-6 pt-14">
+    <section class="mb-12 text-center">
+      <p class="mb-3 text-sm font-bold uppercase tracking-[0.15em] text-red-700">Institucional</p>
+      <h2 class="section-title mb-5 text-3xl font-bold text-[#1B2A4A]">Estrutura organizacional</h2>
+      <p class="mx-auto max-w-3xl text-gray-600">
+        Conheça as principais áreas e órgãos que compõem a ACITE.
+      </p>
+    </section>
+
+    <section class="org-chart" aria-label="Estrutura organizacional da ACITE">
+      <div class="chart-level">
+        <article class="org-card org-card--lead">
+          <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+          <h2>Direção da ACITE</h2>
+          <p>Equipa responsável pela direção da instituição</p>
+        </article>
+      </div>
+      <div class="chart-connector" aria-hidden="true"></div>
+      <div class="chart-branches">
+        <div class="chart-branch">
+          <article class="org-card">
+            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+            <h3>Equipa Reitoral</h3>
+            <p>Direção e coordenação institucional</p>
+          </article>
+        </div>
+        <div class="chart-branch">
+          <article class="org-card">
+            <i class="fa-solid fa-users-gear" aria-hidden="true"></i>
+            <h3>Conselhos</h3>
+            <p>Órgãos Científico e Pedagógico</p>
+          </article>
+        </div>
+        <div class="chart-branch">
+          <article class="org-card">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <h3>Componentes e Departamentos</h3>
+            <p>Áreas académicas e de ensino</p>
+          </article>
+        </div>
+        <div class="chart-branch">
+          <article class="org-card">
+            <i class="fa-solid fa-headset" aria-hidden="true"></i>
+            <h3>Serviços</h3>
+            <p>Apoio administrativo e institucional</p>
+          </article>
+        </div>
+        <div class="chart-branch">
+          <article class="org-card">
+            <i class="fa-solid fa-flask" aria-hidden="true"></i>
+            <h3>Investigação</h3>
+            <p>Laboratórios e iniciativas de investigação</p>
+          </article>
+        </div>
+        <div class="chart-branch">
+          <article class="org-card">
+            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+            <h3>Parcerias</h3>
+            <p>Laboratórios desenvolvidos com empresas</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="faculty-section" aria-labelledby="faculty-title">
+    <div class="mb-12 text-center">
+      <p class="mb-3 text-sm font-bold uppercase tracking-[0.15em] text-red-700">Corpo docente</p>
+      <h2 class="section-title mb-5 text-3xl font-bold text-[#1B2A4A]" id="faculty-title">Docentes dos Doutoramentos</h2>
+      <p class="mx-auto max-w-3xl text-gray-600">Selecione uma formação e consulte os perfis dos docentes.</p>
+    </div>
+    <details class="faculty-accordion" open>
+      <summary>Doutoramento em Direito e Segurança</summary>
+      <div class="faculty-accordion-content">
+        <div class="faculty-timeline">
+      <article class="faculty-entry">
+        <div class="faculty-photo-area">
+          <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <input id="faculty-photo-1" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor Raúl Araújo">
+          <label for="faculty-photo-1">Adicionar foto</label>
+        </div>
+        <div class="faculty-content">
+          <h3>Prof. Doutor Raúl Araújo</h3>
+          <p class="faculty-role">Professor Catedrático · Direito Constitucional</p>
+          <a class="faculty-profile-link" href="../perfil-raul-araujo/index.html">
+            Ver perfil completo
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+      <article class="faculty-entry">
+        <div class="faculty-photo-area">
+          <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <input id="faculty-photo-2" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof.ª Doutora Luzia Sebastião">
+          <label for="faculty-photo-2">Adicionar foto</label>
+        </div>
+        <div class="faculty-content">
+          <h3>Prof.ª Doutora Luzia Sebastião</h3>
+          <p class="faculty-role">Professora Catedrática · Direito Penal e Ciências Jurídico-Criminais</p>
+        </div>
+      </article>
+      <article class="faculty-entry">
+        <div class="faculty-photo-area">
+          <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <input id="faculty-photo-3" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor Carlos Feijó">
+          <label for="faculty-photo-3">Adicionar foto</label>
+        </div>
+        <div class="faculty-content">
+          <h3>Prof. Doutor Carlos Feijó</h3>
+          <p class="faculty-role">Professor Catedrático · Direito Público</p>
+        </div>
+      </article>
+      <article class="faculty-entry">
+        <div class="faculty-photo-area">
+          <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <input id="faculty-photo-4" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor Boaventura de Sousa Santos">
+          <label for="faculty-photo-4">Adicionar foto</label>
+        </div>
+        <div class="faculty-content">
+          <h3>Prof. Doutor Boaventura de Sousa Santos</h3>
+          <p class="faculty-role">Professor Catedrático Jubilado · Sociologia do Direito</p>
+        </div>
+      </article>
+      <article class="faculty-entry">
+        <div class="faculty-photo-area">
+          <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <input id="faculty-photo-5" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor André Luís de Matos Gonçalves">
+          <label for="faculty-photo-5">Adicionar foto</label>
+        </div>
+        <div class="faculty-content">
+          <h3>Prof. Doutor André Luís de Matos Gonçalves</h3>
+          <p class="faculty-role">Professor · Direito Público e Controlo das Finanças Públicas</p>
+        </div>
+      </article>
+      <article class="faculty-entry">
+        <div class="faculty-photo-area">
+          <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <input id="faculty-photo-6" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor José Fontes">
+          <label for="faculty-photo-6">Adicionar foto</label>
+        </div>
+        <div class="faculty-content">
+          <h3>Prof. Doutor José Fontes</h3>
+          <p class="faculty-role">Docente</p>
+        </div>
+      </article>
+      <article class="faculty-entry">
+        <div class="faculty-photo-area">
+          <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <input id="faculty-photo-7" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor Luís Tomé">
+          <label for="faculty-photo-7">Adicionar foto</label>
+        </div>
+        <div class="faculty-content">
+          <h3>Prof. Doutor Luís Tomé</h3>
+          <p class="faculty-role">Docente</p>
+        </div>
+      </article>
+      <article class="faculty-entry">
+        <div class="faculty-photo-area">
+          <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+          <input id="faculty-photo-8" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor José Octávio S. Van-Dúnem">
+          <label for="faculty-photo-8">Adicionar foto</label>
+        </div>
+        <div class="faculty-content">
+          <h3>Prof. Doutor José Octávio S. Van-Dúnem</h3>
+          <p class="faculty-role">Docente</p>
+        </div>
+      </article>
+        </div>
+      </div>
+    </details>
+    <details class="faculty-accordion">
+      <summary>Doutoramento em Estudos Estratégicos e de Segurança</summary>
+      <div class="faculty-accordion-content">
+        <div class="faculty-timeline">
+          <article class="faculty-entry">
+            <div class="faculty-photo-area">
+              <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+              <input id="faculty-photo-9" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor Manuel Meirinho">
+              <label for="faculty-photo-9">Adicionar foto</label>
+            </div>
+            <div class="faculty-content">
+              <h3>Prof. Doutor Manuel Meirinho</h3>
+              <p class="faculty-role">Docente</p>
+            </div>
+          </article>
+          <article class="faculty-entry">
+            <div class="faculty-photo-area">
+              <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+              <input id="faculty-photo-10" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor Ricardo Ramos Pinto">
+              <label for="faculty-photo-10">Adicionar foto</label>
+            </div>
+            <div class="faculty-content">
+              <h3>Prof. Doutor Ricardo Ramos Pinto</h3>
+              <p class="faculty-role">Docente</p>
+            </div>
+          </article>
+          <article class="faculty-entry">
+            <div class="faculty-photo-area">
+              <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+              <input id="faculty-photo-11" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor Francisco Proença Garcia">
+              <label for="faculty-photo-11">Adicionar foto</label>
+            </div>
+            <div class="faculty-content">
+              <h3>Prof. Doutor Francisco Proença Garcia</h3>
+              <p class="faculty-role">Docente</p>
+            </div>
+          </article>
+          <article class="faculty-entry">
+            <div class="faculty-photo-area">
+              <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+              <input id="faculty-photo-12" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof.ª Doutora Carla Costa Guapo">
+              <label for="faculty-photo-12">Adicionar foto</label>
+            </div>
+            <div class="faculty-content">
+              <h3>Prof.ª Doutora Carla Costa Guapo</h3>
+              <p class="faculty-role">Docente</p>
+            </div>
+          </article>
+          <article class="faculty-entry">
+            <div class="faculty-photo-area">
+              <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+              <input id="faculty-photo-13" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof.ª Doutora Teresa Almeida e Silva">
+              <label for="faculty-photo-13">Adicionar foto</label>
+            </div>
+            <div class="faculty-content">
+              <h3>Prof.ª Doutora Teresa Almeida e Silva</h3>
+              <p class="faculty-role">Docente</p>
+            </div>
+          </article>
+          <article class="faculty-entry">
+            <div class="faculty-photo-area">
+              <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+              <input id="faculty-photo-14" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor Pedro Dozi">
+              <label for="faculty-photo-14">Adicionar foto</label>
+            </div>
+            <div class="faculty-content">
+              <h3>Prof. Doutor Pedro Dozi</h3>
+              <p class="faculty-role">Docente</p>
+            </div>
+          </article>
+          <article class="faculty-entry">
+            <div class="faculty-photo-area">
+              <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+              <input id="faculty-photo-15" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor Samuel Victorino">
+              <label for="faculty-photo-15">Adicionar foto</label>
+            </div>
+            <div class="faculty-content">
+              <h3>Prof. Doutor Samuel Victorino</h3>
+              <p class="faculty-role">Docente</p>
+            </div>
+          </article>
+          <article class="faculty-entry">
+            <div class="faculty-photo-area">
+              <div class="faculty-photo-placeholder"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+              <input id="faculty-photo-16" class="faculty-photo-input" type="file" accept="image/*" aria-label="Selecionar foto de Prof. Doutor Miguel Bembe">
+              <label for="faculty-photo-16">Adicionar foto</label>
+            </div>
+            <div class="faculty-content">
+              <h3>Prof. Doutor Miguel Bembe</h3>
+              <p class="faculty-role">Docente</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </details>
+    <p class="faculty-note">As fotografias são guardadas localmente neste navegador.</p>
+  </section>
+
+  <footer class="border-t border-gray-200 bg-gray-50 px-6 py-8 text-center text-sm text-gray-600">
+    <p>© 2026 ACITE. Todos os direitos reservados.</p>
+    <a class="mt-2 inline-block font-semibold text-red-700 hover:underline" href="../organizacao/index.html">Voltar à Organização</a>
+  </footer>
+  
+</body>
+</html>

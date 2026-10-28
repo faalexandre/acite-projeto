@@ -1,0 +1,620 @@
+:root {
+        --navy: #102b45;
+        --navy-dark: #0d1832;
+        --blue: #24658a;
+        --red: #c8102e;
+        --text: #263746;
+        --muted: #61717e;
+        --line: #dce3e8;
+        --pale: #f4f7f9;
+        --white: #fff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        color: var(--text);
+        background: var(--white);
+        font-family: "Noto Sans", sans-serif;
+        line-height: 1.7;
+      }
+      a {
+        color: inherit;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Noto Serif", serif;
+        line-height: 1.3;
+      }
+      .utility-bar {
+        display: flex;
+        min-height: 42px;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1.5rem;
+        padding: 0.45rem max(1.5rem, calc((100% - 1120px) / 2));
+        background: var(--navy-dark);
+        color: #fff;
+        font-size: 0.78rem;
+      }
+      .utility-bar a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .utility-bar a:hover {
+        color: #b9def1;
+      }
+      .utility-bar i {
+        margin-right: 0.4rem;
+        color: #9ed0e8;
+      }
+      .site-header {
+        display: flex;
+        min-height: 96px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.25rem;
+        padding: 0.5rem max(1.5rem, calc((100% - 1120px) / 2));
+        border-bottom: 1px solid var(--line);
+        background: var(--white);
+      }
+      .brand {
+        display: flex;
+        width: 90px;
+        flex-shrink: 0;
+        justify-content: center;
+      }
+      .brand img {
+        display: block;
+        width: 76px;
+        height: 76px;
+        object-fit: contain;
+      }
+      .main-nav {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem 1.25rem;
+      }
+      .main-nav a {
+        color: var(--text);
+        font-size: 0.76rem;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .main-nav a:hover,
+      .main-nav a[aria-current="page"] {
+        color: var(--red);
+      }
+      .header-action {
+        display: inline-flex;
+        min-height: 42px;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.55rem 0.85rem;
+        border-radius: 4px;
+        background: var(--red);
+        color: var(--white);
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .header-action:hover {
+        background: #a50d25;
+      }
+      .menu-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: #fff;
+        color: var(--navy);
+        cursor: pointer;
+        font-size: 1.1rem;
+      }
+      .hero {
+        position: relative;
+        display: flex;
+        min-height: 245px;
+        align-items: center;
+        overflow: hidden;
+        padding: 3rem max(1.5rem, calc((100% - 1120px) / 2));
+        background:
+          linear-gradient(
+            90deg,
+            rgba(13, 24, 50, 0.91),
+            rgba(13, 24, 50, 0.63)
+          ),
+          url("../../assets/img/banner-acite.png") center 45% / cover;
+        color: #fff;
+      }
+      .hero-copy {
+        max-width: 740px;
+      }
+      .eyebrow {
+        margin: 0 0 0.55rem;
+        color: #c6deec;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .hero h1 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3rem);
+      }
+      .hero-copy > p:last-child {
+        max-width: 620px;
+        margin: 0.8rem 0 0;
+        color: #e5edf2;
+      }
+      .breadcrumb {
+        padding: 0.85rem max(1.5rem, calc((100% - 1120px) / 2));
+        border-bottom: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+      .breadcrumb a {
+        color: var(--blue);
+        text-decoration: none;
+      }
+      .breadcrumb span {
+        margin: 0 0.45rem;
+        color: #9aa8b1;
+      }
+      .page-content {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem 4rem;
+      }
+      .section {
+        margin-top: 3.5rem;
+        scroll-margin-top: 1rem;
+      }
+      .section:first-child {
+        margin-top: 0;
+      }
+      .section-heading {
+        max-width: 760px;
+        margin: 0 auto 1.75rem;
+        text-align: center;
+      }
+      .section-heading h2 {
+        margin: 0;
+        color: var(--navy);
+        font-size: clamp(1.55rem, 3vw, 2rem);
+      }
+      .section-heading p {
+        margin: 0.7rem 0 0;
+        color: var(--muted);
+      }
+      .life-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.8fr);
+        gap: 1.5rem;
+        align-items: stretch;
+      }
+      .life-copy,
+      .highlight-card,
+      .student-type,
+      .service-card,
+      .platform-card,
+      .orientation-card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+      .life-copy {
+        padding: 1.5rem 1.6rem;
+      }
+      .life-copy p {
+        margin: 0 0 1rem;
+        color: #485966;
+      }
+      .life-copy p:last-child {
+        margin-bottom: 0;
+      }
+      .highlight-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.6rem;
+        border-top: 4px solid var(--blue);
+        background: var(--pale);
+      }
+      .highlight-card i {
+        margin-bottom: 0.85rem;
+        color: var(--blue);
+        font-size: 1.5rem;
+      }
+      .highlight-card h3 {
+        margin: 0 0 0.65rem;
+        color: var(--navy);
+        font-size: 1.15rem;
+      }
+      .highlight-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      .resource-intro {
+        max-width: 850px;
+        margin: 0 auto 1.5rem;
+        color: var(--muted);
+        text-align: center;
+      }
+      .student-types {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+      .student-type {
+        padding: 1.35rem;
+        background: var(--pale);
+      }
+      .student-type h3 {
+        margin: 0 0 0.55rem;
+        color: var(--blue);
+        font-family: "Noto Sans", sans-serif;
+        font-size: 1rem;
+      }
+      .student-type p {
+        margin: 0;
+        color: #52616c;
+        font-size: 0.91rem;
+      }
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+      }
+      .service-card {
+        padding: 1.3rem;
+        border-top: 3px solid var(--blue);
+      }
+      .service-card > i {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        margin-bottom: 0.9rem;
+        border-radius: 50%;
+        background: #e8f1f6;
+        color: var(--blue);
+      }
+      .service-card h3 {
+        margin: 0 0 0.65rem;
+        color: var(--navy);
+        font-family: "Noto Sans", sans-serif;
+        font-size: 1rem;
+      }
+      .service-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+      .service-card .service-contact {
+        margin-top: 0.8rem;
+      }
+      .service-contact a {
+        color: var(--blue);
+        font-size: 0.84rem;
+        font-weight: 700;
+        overflow-wrap: anywhere;
+        text-decoration: none;
+      }
+      .service-contact a:hover {
+        text-decoration: underline;
+      }
+      .hours {
+        display: block;
+        margin-top: 0.8rem;
+        color: #43535f;
+        font-size: 0.81rem;
+      }
+      .platform-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        max-width: 850px;
+        margin: 0 auto;
+      }
+      .platform-card {
+        padding: 1.6rem;
+        text-align: center;
+        box-shadow: 0 8px 24px rgba(16, 43, 69, 0.05);
+      }
+      .platform-card > i {
+        color: var(--blue);
+        font-size: 2.4rem;
+      }
+      .platform-card h3 {
+        margin: 0.85rem 0 0.55rem;
+        color: var(--blue);
+        font-family: "Noto Sans", sans-serif;
+        font-size: 1.1rem;
+      }
+      .platform-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .platform-card a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        color: var(--red);
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .orientation-intro {
+        max-width: 900px;
+        margin: 0 auto 1.5rem;
+        color: #52616c;
+      }
+      .orientation-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+      .orientation-card {
+        display: flex;
+        gap: 1rem;
+        padding: 1.4rem;
+        background: var(--pale);
+      }
+      .orientation-card > i {
+        flex-shrink: 0;
+        margin-top: 0.15rem;
+        color: var(--blue);
+        font-size: 1.25rem;
+      }
+      .orientation-card h3 {
+        margin: 0 0 0.5rem;
+        color: var(--navy);
+        font-family: "Noto Sans", sans-serif;
+        font-size: 1rem;
+      }
+      .orientation-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .orientation-card a {
+        color: var(--blue);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .contact-band {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        margin-top: 3rem;
+        padding: 1.5rem 1.75rem;
+        border-radius: 8px;
+        background: var(--navy);
+        color: #fff;
+      }
+      .contact-band h2 {
+        margin: 0;
+        font-size: 1.3rem;
+      }
+      .contact-band p {
+        margin: 0.35rem 0 0;
+        color: #dbe6ec;
+        font-size: 0.9rem;
+      }
+      .contact-band a {
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.7rem 1rem;
+        border-radius: 4px;
+        background: #fff;
+        color: var(--navy);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .site-footer {
+        padding: 1.2rem 1.5rem;
+        border-top: 1px solid var(--line);
+        background: var(--pale);
+        color: var(--muted);
+        text-align: center;
+        font-size: 0.86rem;
+      }
+      .site-footer p {
+        margin: 0.2rem 0;
+      }
+      .site-footer a {
+        color: var(--blue);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .hero {
+        overflow: visible;
+        min-height: 500px;
+        align-items: flex-end;
+        padding-bottom: 8rem;
+        background-image:
+          linear-gradient(
+            90deg,
+            rgba(13, 24, 50, 0.35),
+            rgba(13, 24, 50, 0.18)
+          ),
+          url("../../assets/img/banner-acite.png");
+      }
+      .audience-form {
+        display: grid;
+        width: 100%;
+        max-width: 1080px;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+        margin: 0 auto;
+      }
+      .audience-field {
+        position: relative;
+        display: block;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+      }
+      .audience-field::after {
+        position: absolute;
+        top: 50%;
+        right: 0.6rem;
+        color: #fff;
+        content: "▾";
+        pointer-events: none;
+        transform: translateY(-50%);
+      }
+      .audience-field select {
+        width: 100%;
+        appearance: none;
+        border: 0;
+        border-radius: 0;
+        outline-offset: 4px;
+        background: transparent;
+        padding: 0.5rem 2rem 0.65rem 0;
+        color: #fff;
+        font:
+          700 clamp(1.35rem, 3vw, 2rem) "Noto Sans",
+          sans-serif;
+        cursor: pointer;
+      }
+      .audience-field select option {
+        background: #fff;
+        color: var(--navy);
+        font-size: 1rem;
+      }
+      .audience-field select:focus-visible {
+        outline: 2px solid #fff;
+      }
+      .audience-choice { position: relative; }
+      .audience-option { display: flex; width: 100%; min-height: 76px; align-items: center; justify-content: space-between; gap: 1rem; padding: .5rem .25rem; border: 0; border-bottom: 2px solid rgba(255,255,255,.88); background: transparent; color: #fff; font: 700 clamp(1.15rem,2.2vw,1.8rem) 'Noto Sans',sans-serif; text-align: left; text-shadow: 0 2px 8px rgba(0,0,0,.45); cursor: pointer; }
+      .audience-option:hover, .audience-option:focus-visible { border-color: #fff; color: #e8f3fa; }
+      .audience-option:disabled { cursor: default; opacity: .9; }
+      .audience-option i { font-size: .85rem; }
+      .audience-choice-menu { position: absolute; z-index: 4; top: calc(100% + .5rem); right: 0; left: 0; display: none; overflow: visible; border: 1px solid rgba(255,255,255,.35); border-radius: 6px; background: #fff; box-shadow: 0 14px 30px rgba(13,24,50,.25); text-align: left; text-shadow: none; }
+      .audience-choice.is-open .audience-choice-menu { display: grid; }
+      .audience-choice-menu button { padding: .75rem 1rem; border: 0; background: #fff; color: var(--navy); font: 600 .95rem 'Noto Sans',sans-serif; text-align: left; cursor: pointer; }
+      .audience-choice-menu button + button { border-top: 1px solid var(--line); }
+      .audience-choice-menu button:hover, .audience-choice-menu button:focus-visible { background: var(--pale); color: var(--red); }
+      @media (max-width: 900px) {
+        .service-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .site-header {
+          gap: 0.75rem;
+        }
+        .main-nav {
+          gap: 0.45rem 0.8rem;
+        }
+      }
+      @media (max-width: 640px) {
+        .utility-bar {
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 0.3rem 1rem;
+          padding: 0.6rem 1rem;
+        }
+        .site-header {
+          position: relative;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 0.5rem 1rem;
+        }
+        .brand {
+          width: 72px;
+        }
+        .brand img {
+          width: 64px;
+          height: 64px;
+        }
+        .menu-toggle {
+          display: inline-flex;
+          order: 2;
+        }
+        .header-action {
+          order: 3;
+          min-height: 38px;
+          padding: 0.45rem 0.65rem;
+          font-size: 0.75rem;
+        }
+        .main-nav {
+          display: none;
+          order: 4;
+          flex: 0 0 100%;
+          align-items: stretch;
+          flex-direction: column;
+          gap: 0;
+          padding: 0.4rem 0;
+          border-top: 1px solid var(--line);
+        }
+        .site-header.menu-open .main-nav {
+          display: flex;
+        }
+        .main-nav a {
+          padding: 0.65rem 0.25rem;
+          border-bottom: 1px solid var(--line);
+        }
+        .hero {
+          min-height: 360px;
+          padding: 2.5rem 1.25rem 5rem;
+        }
+        .audience-form {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+        .breadcrumb {
+          padding: 0.75rem 1.25rem;
+        }
+        .page-content {
+          padding: 2rem 1.1rem 3rem;
+        }
+        .section {
+          margin-top: 2.75rem;
+        }
+        .life-grid,
+        .student-types,
+        .platform-grid,
+        .orientation-grid {
+          grid-template-columns: 1fr;
+        }
+        .life-copy,
+        .highlight-card,
+        .student-type,
+        .service-card,
+        .platform-card,
+        .orientation-card {
+          padding: 1.2rem;
+        }
+        .service-grid {
+          grid-template-columns: 1fr;
+        }
+        .contact-band {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 1.3rem;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }

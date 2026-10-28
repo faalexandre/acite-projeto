@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perfil académico e curricular dos docentes da ACITE.">
+  <title>Perfil docente — ACITE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  
+  <link rel="stylesheet" href="../../assets/css/languages.css">
+  <script src="../../assets/js/languages.js" defer></script>
+  <link rel="stylesheet" href="perfil-docente.css">
+  <script src="perfil-docente.js" defer></script>
+</head>
+<body>
+  <div class="flex min-h-[72px] flex-wrap items-center justify-center gap-x-6 gap-y-2 bg-[#0d1832] px-5 py-4 text-sm text-white md:justify-end md:px-8">
+    <span class="whitespace-nowrap">Tem alguma questão?</span>
+    <a class="whitespace-nowrap transition-colors hover:text-blue-300" href="tel:+24492336822">+244 92336822 / 92336855</a>
+    <a class="inline-flex items-center gap-3 whitespace-nowrap transition-colors hover:text-blue-300" href="mailto:s.academia@acite.ao">
+      <i class="fa-regular fa-envelope text-blue-300" aria-hidden="true"></i>
+      s.academia@acite.ao
+    </a>
+    <a class="inline-flex items-center gap-3 whitespace-nowrap transition-colors hover:text-blue-300" href="../cursos/index.html">
+      <i class="fa-regular fa-user text-blue-300" aria-hidden="true"></i>
+      Inscrições
+    </a>
+  </div>
+  <header class="site-header">
+    <a href="../../index.html" class="brand" aria-label="ACITE - página inicial">
+      <img src="../../assets/logo/logo.png" alt="Logo da ACITE">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-navigation">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+    <nav class="main-nav" id="main-navigation" aria-label="Menu principal">
+      <a href="../institucional/index.html">INSTITUCIONAL</a>
+      <a href="../investigacao/index.html">INVESTIGAÇÃO</a>
+      <a href="../cursos/index.html">CURSOS</a>
+      <a href="../extensao/index.html">EXTENSÃO</a>
+      <a href="../estudantes/index.html">ESTUDANTES</a>
+      <a href="../../index.html#noticias">NOTÍCIAS</a>
+      <a href="../compromissos/index.html">EVENTOS</a>
+      <a href="../contactos/index.html">CONTACTOS</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <p>Corpo docente</p>
+    <h1>Perfil académico</h1>
+  </section>
+  <nav class="border-b border-gray-200 bg-white px-6 py-4 text-sm" aria-label="Navegação estrutural">
+    <a class="breadcrumb-link" href="../../index.html">ACITE</a>
+    <span class="mx-2 text-gray-500" aria-hidden="true">›</span>
+    <a class="breadcrumb-link" href="../organigrama/index.html">Organograma</a>
+    <span class="mx-2 text-gray-500" aria-hidden="true">›</span>
+    <span class="text-gray-600" id="breadcrumb-name">Perfil docente</span>
+  </nav>
+  <main class="profile-main">
+    <section class="profile-intro" aria-labelledby="profile-name">
+      <button class="profile-photo" id="profile-photo" type="button" aria-label="Modificar fotografia do docente" title="Modificar fotografia">
+        <i class="fa-solid fa-user" aria-hidden="true"></i>
+      </button>
+      <input id="profile-photo-file" type="file" accept="image/*" hidden>
+      <p id="profile-photo-status" class="profile-note" role="status" aria-live="polite"></p>
+      <h2 id="profile-name">Perfil docente</h2>
+      <p class="profile-role" id="profile-role">Docente da ACITE</p>
+      <a class="orientation-request" id="orientation-request" href="mailto:s.academia@acite.ao">
+        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+        Pedido de orientação de trabalho
+      </a>
+    </section>
+    <section class="profile-details" aria-labelledby="curriculum-title">
+      <h2 id="curriculum-title">Resumo curricular</h2>
+      <p class="profile-note" id="profile-note">As secções abaixo serão atualizadas à medida que os dados curriculares forem disponibilizados.</p>
+      <details class="profile-accordion">
+        <summary>Biografia</summary>
+        <div class="profile-accordion-content" id="profile-biography">Informação biográfica ainda não disponibilizada.</div>
+      </details>
+      <details class="profile-accordion">
+        <summary>Formação académica e especializada</summary>
+        <div class="profile-accordion-content" id="profile-education">Informação sobre a formação académica ainda não disponibilizada.</div>
+      </details>
+      <details class="profile-accordion">
+        <summary>Percurso académico e profissional</summary>
+        <div class="profile-accordion-content" id="profile-career">Informação sobre o percurso académico e profissional ainda não disponibilizada.</div>
+      </details>
+      <details class="profile-accordion">
+        <summary>Áreas de investigação</summary>
+        <div class="profile-accordion-content" id="profile-research">Informação sobre as áreas de investigação ainda não disponibilizada.</div>
+      </details>
+      <details class="profile-accordion">
+        <summary>Obras e publicações</summary>
+        <div class="profile-accordion-content" id="profile-publications">Informação sobre obras e publicações ainda não disponibilizada.</div>
+      </details>
+      <details class="profile-accordion">
+        <summary>Contributo académico e institucional</summary>
+        <div class="profile-accordion-content" id="profile-contribution">Informação sobre o contributo académico e institucional ainda não disponibilizada.</div>
+      </details>
+    </section>
+    <div class="works-section page-inline-1">
+      <a class="works-upload page-inline-2" href="../autor-publicacao/index.html"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Ver autores e obras publicadas</a>
+    </div>
+  </main>
+  <footer class="border-t border-gray-200 bg-gray-50 px-6 py-8 text-center text-sm text-gray-600">
+    <p>© 2026 ACITE. Todos os direitos reservados.</p>
+    <a class="mt-2 inline-block font-semibold text-red-700 hover:underline" href="../organigrama/index.html">Voltar ao Organograma</a>
+  </footer>
+  
+</body>
+</html>

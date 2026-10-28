@@ -1,0 +1,30 @@
+.language-host { display: flex; flex-wrap: wrap; align-items: center; }
+.language-host-standalone { justify-content: flex-end; min-height: 52px; padding: .4rem 2rem; background: #0d1832; color: #fff; }
+.language-bar { display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: .4rem .6rem; min-width: 0; max-width: 100%; margin-left: auto; color: #fff; font: 600 .8rem/1.5 'Noto Sans', sans-serif; }
+.language-bar label { margin: 0; color: inherit; }
+.language-bar select { width: auto; max-width: 100%; min-height: 44px; padding: .35rem 1.8rem .35rem .6rem; border: 1px solid #bbc5d3; border-radius: 4px; background: #fff; color: #1b2a4a; font: inherit; cursor: pointer; }
+.language-bar select:focus-visible { outline: 3px solid #7cc4ff; outline-offset: 3px; }
+#language-status:empty { display: none; }
+#language-status { flex-basis: 100%; min-width: 0; overflow-wrap: anywhere; text-align: right; font-size: .75rem; }
+#acite-translate { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+@media (max-width: 600px) { .language-bar { flex-basis: 100%; justify-content: center; margin-left: 0; } .language-host-standalone { padding: .5rem 1rem; } #language-status { text-align: center; } }
+/* Colunas laterais iguais mantêm os contactos no centro da página. */
+body > .language-host { display: grid; grid-template-columns: minmax(80px, 1fr) minmax(0, auto) minmax(80px, 1fr); align-items: center; column-gap: 1rem; }
+.utility-contacts { grid-column: 2; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .5rem 1.5rem; text-align: center; }
+.utility-contacts > * { min-width: 0; max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+.language-host > .language-bar { grid-column: 3; justify-self: end; margin-left: 0; }
+.language-host .utility-contacts .utility-question { display: inline; }
+body > .language-host-standalone { grid-template-columns: minmax(0, 1fr); }
+.language-host-standalone > .language-bar { grid-column: 1; }
+@media (max-width: 1100px) {
+  body > .language-host { grid-template-columns: minmax(0, 1fr); row-gap: .5rem; }
+  .utility-contacts { grid-column: 1; gap: .4rem 1rem; }
+  .language-host > .language-bar { grid-column: 1; justify-self: center; justify-content: center; }
+  #language-status { text-align: center; }
+}
+@media (max-width: 600px) {
+  body > .language-host { padding: .75rem 1rem; }
+  .language-host > .language-bar { width: 100%; }
+  .language-bar select { min-width: 0; min-height: 32px; padding: .2rem 1.4rem .2rem .45rem; font-size: .75rem; }
+  .utility-contacts { gap: .5rem 1rem; }
+}

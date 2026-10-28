@@ -1,0 +1,31 @@
+:root { --navy: #1b2a4a; --navy-dark: #0d1832; --blue: #2864aa; --red: #c8102e; --text: #344253; --muted: #687789; --line: #e5e7eb; --pale: #f7f8fa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--text); font-family: 'Noto Sans', sans-serif; line-height: 1.75; }
+    a { color: inherit; }
+    .utility { display: flex; min-height: 44px; flex-wrap: wrap; align-items: center; justify-content: center; gap: .5rem 1.5rem; padding: .5rem 1rem; background: var(--navy-dark); color: #fff; font-size: .78rem; }
+    .utility a { text-decoration: none; }
+    .header { display: flex; min-height: 96px; align-items: center; justify-content: space-between; gap: 1rem; padding: .5rem max(1.25rem, calc((100% - 1200px) / 2)); background: #fff; }
+    .brand img { display: block; width: 78px; height: 78px; object-fit: contain; }
+    .nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem 1.4rem; }
+    .nav a { color: var(--navy); font-size: .78rem; font-weight: 700; text-decoration: none; text-transform: uppercase; }
+    .nav a:hover, .nav a[aria-current="page"] { color: var(--red); }
+    .hero { display: flex; min-height: 285px; align-items: flex-end; padding: 2rem max(1.25rem, calc((100% - 1120px) / 2)); background: linear-gradient(90deg, rgba(4,12,24,.82), rgba(4,12,24,.5)), url('../../assets/img/banner-acite.png') center/cover; color: #fff; }
+    .hero h1 { margin: 0; padding-left: 1rem; border-left: 3px solid #2794dc; font-size: clamp(2rem, 4vw, 2.8rem); }
+    .breadcrumb { padding: .8rem max(1.25rem, calc((100% - 1120px) / 2)); border-bottom: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
+    .breadcrumb a { color: var(--red); text-decoration: none; }
+    main { display: grid; grid-template-columns: minmax(0, 2fr) minmax(220px, .8fr); gap: 2.5rem; max-width: 1120px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+    .story h2, .sidebar h2 { margin: 0 0 1rem; color: var(--navy); font-size: 1.3rem; }
+    .story h2::after { display: block; width: 42px; height: 2px; margin-top: .6rem; background: var(--navy); content: ''; }
+    .story-intro { margin: 0 0 1.5rem; text-align: justify; }
+    .timeline { margin: 2rem 0 0; padding: 0; list-style: none; }
+    .timeline li { position: relative; margin-left: .55rem; padding: 0 0 2rem 1.6rem; border-left: 2px solid var(--line); }
+    .timeline li::before { position: absolute; top: .35rem; left: -.48rem; width: .8rem; height: .8rem; border: 2px solid #fff; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 1px var(--blue); content: ''; }
+    .timeline li:last-child { padding-bottom: 0; border-left-color: transparent; }
+    .timeline time { display: block; margin-bottom: .35rem; color: var(--blue); font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    .timeline p { margin: 0; text-align: justify; }
+    .sidebar { padding: 1.25rem; border: 1px solid var(--line); border-radius: 6px; background: var(--pale); align-self: start; }
+    .sidebar p { margin: 0 0 1rem; color: var(--muted); font-size: .9rem; }
+    .sidebar a { display: block; padding: .65rem 0; border-top: 1px solid var(--line); color: var(--navy); font-size: .9rem; font-weight: 600; text-decoration: none; }
+    .sidebar a:hover { color: var(--red); }
+    footer { padding: 1.25rem; border-top: 1px solid var(--line); background: var(--pale); color: var(--muted); text-align: center; font-size: .85rem; }
+    @media (max-width: 760px) { .header { flex-wrap: wrap; justify-content: center; } .nav { gap: .6rem 1rem; } main { grid-template-columns: 1fr; gap: 2rem; padding-top: 2rem; } }

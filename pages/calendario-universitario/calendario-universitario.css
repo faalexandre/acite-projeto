@@ -1,0 +1,93 @@
+/* === Variáveis e Reset === */
+    :root {
+      --primary: #1B2A4A;      /* Azul escuro institucional */
+      --accent: #C8102E;       /* Vermelho/Destaque (inspirado no site da Poitiers) */
+      --text-main: #333333;
+      --text-muted: #666666;
+      --bg-light: #F8F9FA;
+      --bg-white: #FFFFFF;
+      --border: #E5E7EB;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    i { display: inline-block; line-height: 1; vertical-align: -0.1em; }
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      color: var(--text-main);
+      line-height: 1.6;
+      background-color: var(--bg-white);
+    }
+    h1, h2, h3 { font-family: 'Noto Serif', serif; }
+
+    /* === Cabeçalho Principal (Logo + Nav) === */
+    .header {
+      position: absolute;
+      z-index: 2;
+      top: 2rem;
+      left: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(1320px, calc(100% - 4rem));
+      min-height: 118px;
+      gap: 1.5rem;
+      margin: 0 auto;
+      padding: 0.75rem 2rem;
+      background: #fff;
+      border-radius: 3px;
+      box-shadow: 0 10px 32px rgba(13, 24, 50, 0.16);
+      transform: translateX(-50%);
+    }
+    .header .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 110px;
+      flex-shrink: 0;
+    }
+    .header .brand img {
+      width: 86px;
+      height: 86px;
+      object-fit: contain;
+      display: block;
+    }
+    .header .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem 1.35rem;
+      flex: 1;
+      flex-wrap: wrap;
+    }
+    .header .main-nav a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.2rem 0;
+      transition: color 0.2s ease;
+    }
+    .header .main-nav a:hover,
+    .header .main-nav a.active {
+      color: var(--primary);
+    }
+.menu-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #0e2f5d;
+      border-radius: 50%;
+      background: #fff;
+      color: #0e2f5d;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+.utility{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem;padding:.6rem 2rem;background:#0d1832;color:#fff;font-size:.75rem}a{color:inherit;text-decoration:none}.skip{position:absolute;top:-100px;padding:1rem;background:#fff;z-index:10}.skip:focus{top:1rem}a:focus-visible,button:focus-visible{outline:3px solid #2864aa;outline-offset:4px}.hero{position:relative;min-height:380px;display:flex;align-items:flex-end;padding:12rem max(1.5rem,calc((100% - 1200px)/2)) 3rem;background:linear-gradient(#0d183255,#0d1832bd),url('../../assets/img/banner-acite.png') center/cover}.hero h1{font-size:clamp(2rem,4vw,3rem);color:#fff;padding-left:1rem;border-left:3px solid #c8102e}.header .main-nav [aria-current]{color:var(--accent)}.breadcrumb{display:flex;gap:.8rem;flex-wrap:wrap;padding:1.25rem max(1.5rem,calc((100% - 1200px)/2));border-bottom:1px solid var(--border);font-size:.8rem;color:var(--text-muted)}.breadcrumb a{color:var(--accent)}main{max-width:1248px;padding:3rem 1.5rem 4rem;margin:auto}.intro{max-width:1100px;margin:0 auto 2rem;font-size:.95rem;line-height:1.95;color:#566477}.intro strong{font-weight:600}.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}.contact-card{padding:2.5rem 1.5rem;border:1px solid var(--border);border-radius:6px;box-shadow:0 3px 14px #1b2a4a08;text-align:center}.contact-card>i{display:block;font-size:2.2rem;margin-bottom:1rem;color:#2864aa}.contact-card:nth-child(2)>i{color:#427d52}.contact-card:nth-child(3)>i{color:#ae7d13}.contact-card h2{font:700 1.1rem/1.5 'Noto Sans',sans-serif;color:var(--primary);margin-bottom:1.25rem}.contact-card p,address,.contact-card dl{font-size:.9rem;line-height:1.9;color:#566477}address{font-style:normal}.contact-card a:hover{text-decoration:underline;color:var(--accent)}.contact-card dd{margin:0 0 .5rem;font-weight:600}.hours-note{margin-top:1rem;padding-top:.75rem;border-top:1px solid var(--border);font-size:.75rem!important}.location{margin-top:3rem}.location-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}.location-heading p{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted)}.location h2{color:var(--primary);font-size:1.5rem}.location-heading>a{font-size:.8rem;font-weight:700;color:var(--accent)}iframe{display:block;width:100%;height:450px;border:1px solid var(--border);border-radius:6px}footer{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:2.5rem max(1.5rem,calc((100% - 1200px)/2));background:#f8f9fa;border-top:1px solid var(--border);font-size:.8rem;color:var(--text-muted)}footer strong{color:var(--primary)}footer nav{display:flex;justify-content:flex-end;align-items:start;flex-wrap:wrap;gap:1rem}footer small{grid-column:1/-1;padding-top:1.5rem;border-top:1px solid var(--border)}@media(max-width:900px){.contact-grid{gap:1rem}.contact-card{padding:2rem 1rem}}@media(max-width:768px){.header{top:1rem;width:calc(100% - 2rem);min-height:0;flex-wrap:wrap;gap:.5rem;padding:.6rem 1rem}.header .brand{width:auto}.header .brand img{width:68px;height:68px}.menu-toggle{display:inline-flex}.header .main-nav{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid var(--border)}.header.menu-open .main-nav{display:flex}.header .main-nav a{padding:.65rem 0}.hero{min-height:330px}.contact-grid{grid-template-columns:1fr}.location-heading{align-items:flex-start;flex-direction:column}iframe{height:340px}footer{grid-template-columns:1fr}footer nav{justify-content:flex-start}}
+.hero{min-height:440px;justify-content:center;padding-bottom:4rem}.hero h1{border:0;padding:0;text-align:center;font-family:'Noto Sans',sans-serif;font-size:clamp(1.8rem,4vw,2.7rem)}.calendar-layout{display:grid;grid-template-columns:300px minmax(0,1fr);max-width:1280px;margin:auto}.calendar-sidebar{padding:3rem 1.75rem;background:#f8f9fa}.calendar-sidebar h2{font:700 .95rem/1.6 'Noto Sans',sans-serif;color:var(--accent);padding-bottom:.8rem;margin-bottom:.75rem;border-bottom:1px solid var(--border)}.calendar-sidebar nav>a{display:block;padding:.7rem .8rem;margin-bottom:.5rem;background:#eef0f2;color:var(--primary);font-size:.8rem}.calendar-sidebar nav>a::before{content:'›';margin-right:.6rem}.calendar-sidebar [aria-current]{color:var(--accent)}.sidebar-help{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:.78rem;color:var(--text-muted)}.sidebar-help a{color:var(--accent);overflow-wrap:anywhere}.calendar-layout main{min-width:0;width:100%;padding:3rem 2.5rem 4rem;margin:0}.section-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem}#calendar-title{color:var(--primary);font:700 clamp(1.3rem,2.5vw,1.8rem)/1.5 'Noto Sans',sans-serif;margin-bottom:1.5rem}#calendar-title::before{content:'';display:block;width:30px;height:3px;background:var(--accent);margin-bottom:1rem}.calendar-intro{font-size:.9rem;color:#566477;margin-bottom:1.5rem}.calendar-notice{display:flex;align-items:flex-start;gap:.8rem;padding:1rem;margin-bottom:1.5rem;background:#f3f6fa;border-left:3px solid var(--primary);font-size:.8rem;color:#566477}.calendar-notice i{margin-top:.2rem;color:var(--primary)}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.85rem;line-height:1.7}caption{text-align:left;padding:0 0 .7rem;font-size:.75rem;color:var(--text-muted)}th,td{border:1px solid #dce1e7;padding:.9rem 1rem;text-align:left;vertical-align:top}thead th{background:var(--primary);color:#fff;font-size:.75rem}tbody th{width:44%;color:var(--primary);font-weight:600}tbody tr:nth-child(even){background:#fafbfc}td{color:#566477}.calendar-footnote{font-size:.75rem;color:var(--text-muted);margin:1rem 0 2rem}.calendar-contact{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.25rem;background:#f8f9fa;border:1px solid var(--border)}.calendar-contact h3{font:700 .9rem 'Noto Sans',sans-serif;color:var(--primary);margin-bottom:.4rem}.calendar-contact p{font-size:.78rem;color:var(--text-muted)}.calendar-contact>a{font-size:.8rem;font-weight:700;color:var(--accent);white-space:nowrap}@media(max-width:900px){.calendar-layout{grid-template-columns:230px minmax(0,1fr)}.calendar-layout main{padding:2rem 1.5rem}.calendar-sidebar{padding:2rem 1rem}}@media(max-width:650px){.calendar-layout{grid-template-columns:1fr}.calendar-sidebar{padding:1.5rem}.calendar-sidebar nav{display:flex;flex-wrap:wrap;gap:.5rem}.calendar-sidebar h2{flex-basis:100%}.calendar-sidebar nav>a{margin:0}.sidebar-help{display:none}.calendar-contact{flex-direction:column;align-items:flex-start}.hero{min-height:350px}th,td{padding:.75rem;font-size:.78rem}}

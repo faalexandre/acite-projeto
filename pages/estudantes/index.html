@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Informações e recursos académicos para estudantes da ACITE."
+    />
+    <title>Estudantes — ACITE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    
+    <link rel="stylesheet" href="../../assets/css/languages.css">
+  <script src="../../assets/js/languages.js" defer></script>
+  <link rel="stylesheet" href="estudantes.css">
+  <script src="estudantes.js" defer></script>
+</head>
+  <body>
+    <div class="utility-bar">
+      <span>Tem alguma questão?</span>
+      <a href="tel:+24492336822"
+        ><i class="fa-solid fa-phone" aria-hidden="true"></i>+244 923 368 22 /
+        923 368 55</a
+      >
+      <a href="mailto:s.academia@acite.ao"
+        ><i class="fa-regular fa-envelope" aria-hidden="true"></i
+        >s.academia@acite.ao</a
+      >
+    </div>
+    <header class="site-header">
+      <a class="brand" href="../../index.html" aria-label="ACITE — página inicial">
+        <img src="../../assets/logo/logo.png" alt="Logótipo da ACITE" />
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav class="main-nav" id="main-navigation" aria-label="Menu principal">
+        <a href="../institucional/index.html">Institucional</a>
+        <a href="../cursos/index.html">Cursos</a>
+        <a href="index.html" aria-current="page">Estudantes</a>
+        <a href="../autor-publicacao/index.html">Publicações</a>
+        <a href="../../index.html#noticias">Notícias</a>
+        <a href="../apoio-empresas/index.html">Empresas</a>
+        <a href="../oportunidades/index.html">Oportunidades</a>
+        <a href="../contactos/index.html">Contactos</a>
+      </nav>
+      <a class="header-action" href="../candidatura/index.html"
+        ><i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i
+        >Inscrições</a
+      >
+    </header>
+    <section class="hero" aria-labelledby="page-title">
+      <form class="audience-form" id="audience-form">
+        <div class="audience-field audience-choice" id="profile-choice">
+          <button class="audience-option" id="profile-trigger" type="button" aria-label="Escolha o seu perfil" aria-expanded="false" aria-controls="profile-options">
+            Selecione o seu perfil <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <nav class="audience-choice-menu" id="profile-options" aria-label="Perfis disponíveis"></nav>
+        </div>
+        <div class="audience-field audience-choice" id="audience-choice">
+          <button class="audience-option" id="audience-trigger" type="button" aria-expanded="false" aria-controls="audience-intentions" disabled>
+            ...e quero <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <nav class="audience-choice-menu" id="audience-intentions" aria-label="Escolha o que procura"></nav>
+        </div>
+      </form>
+    </section>
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+      <a href="../../index.html">Página inicial</a
+      ><span aria-hidden="true">›</span>Estudantes
+    </nav>
+
+    <main class="page-content">
+      <section
+        class="section"
+        id="vida-estudantil"
+        aria-labelledby="life-title"
+      >
+        <div class="section-heading">
+          <h2 id="life-title">Vida estudantil</h2>
+          <p>
+            Uma comunidade académica orientada para o conhecimento, a
+            investigação e a transformação de Angola.
+          </p>
+        </div>
+        <div class="life-grid">
+          <div class="life-copy">
+            <p>
+              A ACITE forma académicos e profissionais completos, com capacidade
+              de liderança e integração nas diversas esferas da sociedade.
+              Promove o pensamento crítico e a resolução de problemas,
+              competências necessárias para liderar a investigação científica, a
+              nível nacional, regional e continental, nas ciências sociais,
+              engenharias e tecnologias — áreas essenciais para a transformação
+              de Angola numa sociedade moderna baseada no conhecimento.
+            </p>
+            <p>
+              Os estudantes de pós-graduação que iniciam a sua jornada na ACITE
+              participam na semana de orientação académica para novos ingressos,
+              denominada <strong>ACITE Open Day</strong>. Nesse momento, são
+              apresentados à vida na Academia, ao que podem esperar e ao que se
+              espera de cada estudante.
+            </p>
+            <p>
+              Os estudantes também podem integrar os
+              <strong>Núcleos de Investigação Científica (NIC)</strong> como
+              assistentes de investigação, em regime não remunerado. Aí
+              colaboram em projetos estratégicos da ACITE e podem desenvolver
+              dissertações de mestrado, teses de doutoramento ou projetos de
+              pesquisa.
+            </p>
+          </div>
+          <aside class="highlight-card">
+            <i class="fa-solid fa-flask" aria-hidden="true"></i>
+            <h3>Investigação desde o início</h3>
+            <p>
+              Os Núcleos de Investigação Científica aproximam os estudantes dos
+              projetos e da produção científica da Academia.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="recursos" aria-labelledby="resources-title">
+        <div class="section-heading">
+          <h2 id="resources-title">Recursos dos estudantes</h2>
+          <p>
+            Antes de começar a sua jornada na ACITE, é importante conhecer
+            alguns fundamentos dos cursos de pós-graduação e de extensão
+            universitária. Muitos processos dependem do tipo de estudante.
+          </p>
+        </div>
+        <div class="student-types">
+          <article class="student-type">
+            <h3>
+              <i class="fa-solid fa-user-graduate" aria-hidden="true"></i>
+              Estudante de pós-graduação
+            </h3>
+            <p>
+              Se foi admitido num curso de mestrado ou especialização, com
+              duração não inferior a um ano, é estudante de pós-graduação da
+              ACITE. O Departamento de Assuntos Académicos, que integra as
+              Secções de Gestão Académica e Secretaria Académica e está adstrito
+              ao Vice-Reitor para a Área Académica, acompanha o seu percurso. O
+              Departamento de Investigação Científica e o Instituto de Estudos
+              Avançados em Ciências, Engenharias e Tecnologias também podem
+              apoiar em matérias ligadas à investigação científica.
+            </p>
+          </article>
+          <article class="student-type">
+            <h3>
+              <i class="fa-solid fa-language" aria-hidden="true"></i> Estudante
+              de línguas
+            </h3>
+            <p>
+              Se foi admitido num curso de línguas, é estudante do Centro de
+              Estudos de Línguas (CEL), responsável pelo seu acompanhamento na
+              Academia. A Secretaria Académica pode ajudar em algumas questões;
+              os assuntos financeiros são tratados na Tesouraria.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="servicos-academicos"
+        aria-labelledby="services-title"
+      >
+        <div class="section-heading">
+          <h2 id="services-title">Serviços académicos</h2>
+          <p>
+            Encontre o apoio adequado para as diferentes etapas da sua vida
+            académica.
+          </p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <i class="fa-solid fa-clipboard-list" aria-hidden="true"></i>
+            <h3>Secretaria Académica</h3>
+            <p>
+              A Secretaria Académica (SAC), secção do Departamento de Assuntos
+              Académicos, trata em primeira instância dos assuntos ligados aos
+              estudantes e candidatos a estudantes da ACITE.
+            </p>
+            <p class="service-contact">
+              <a href="mailto:s.academia@acite.ao">s.academia@acite.ao</a>
+            </p>
+            <p class="service-contact">
+              <a href="tel:+244934200824">+244 934 200 824</a>
+            </p>
+          </article>
+          <article class="service-card">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <h3>Gestão Académica</h3>
+            <p>
+              Vinculada ao Departamento de Assuntos Académicos, acompanha os
+              processos estudantis, o acesso às notas e a emissão de
+              declarações, históricos académicos e documentos similares.
+            </p>
+            <span class="hours"
+              ><strong>Atendimento:</strong> segunda a sexta-feira, das 8h00 às
+              15h00.</span
+            >
+            <p class="service-contact">
+              <a href="mailto:dg.academica@acite.ao">dg.academica@acite.ao</a>
+            </p>
+          </article>
+          <article class="service-card">
+            <i class="fa-solid fa-microscope" aria-hidden="true"></i>
+            <h3>Departamento de Investigação Científica</h3>
+            <p>
+              O DIC acompanha as atividades científicas da ACITE e apoia os
+              estudantes na elaboração de trabalhos científicos, promovendo
+              mecanismos de orientação e execução.
+            </p>
+          </article>
+          <article class="service-card">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            <h3>Biblioteca</h3>
+            <p>
+              Disponibiliza bibliografia para pesquisa e estudo, sala de
+              leitura, sala de informática e apoio do pessoal bibliotecário na
+              consulta do catálogo por área de conhecimento.
+            </p>
+            <span class="hours"
+              ><strong>Funcionamento:</strong> segunda a sexta-feira, das 8h00
+              às 20h00; sábados, das 8h00 às 13h00.</span
+            >
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="plataformas"
+        aria-labelledby="platforms-title"
+      >
+        <div class="section-heading">
+          <h2 id="platforms-title">Aprendizagem e gestão académica</h2>
+          <p>
+            Recursos digitais para apoiar o ensino, a comunicação e o
+            acompanhamento do percurso académico.
+          </p>
+        </div>
+        <div class="platform-grid">
+          <article class="platform-card">
+            <i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>
+            <h3>Aulas online</h3>
+            <p>
+              A Academia de Ciências Sociais e Tecnologias dispõe de
+              infraestruturas e equipamentos para apoiar os cursos de
+              pós-graduação em formato online. Quando autorizado pela área
+              competente, é possível assistir a aulas em modo online, incluindo
+              via Zoom.
+            </p>
+            <a href="../cursos/index.html"
+              >Conhecer as formações
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+            ></a>
+          </article>
+          <article class="platform-card">
+            <i class="fa-solid fa-laptop-file" aria-hidden="true"></i>
+            <h3>Sistema de Gestão Académica</h3>
+            <p>
+              O SIGA é uma plataforma digital onde docentes e discentes podem
+              interagir e partilhar experiências académicas e científicas,
+              consultar informações e esclarecer dúvidas com os docentes, de
+              acordo com a disciplina ou projeto.
+            </p>
+            <a
+              href="mailto:s.academia@acite.ao?subject=Sistema%20de%20Gest%C3%A3o%20Acad%C3%A9mica"
+              >Solicitar informações
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+            ></a>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="orientacao"
+        aria-labelledby="orientation-title"
+      >
+        <div class="section-heading">
+          <h2 id="orientation-title">Orientação académica</h2>
+        </div>
+        <p class="orientation-intro">
+          Na ACITE, o estudante não fica por sua conta. Desde o início do
+          percurso, participa numa semana de orientação académica, o
+          <strong>ACITE Open Day</strong>, organizada pelo Departamento de
+          Assuntos Académicos para apresentar a Academia e orientar os novos
+          ingressos. Depois desta etapa, o Departamento de Investigação
+          Científica e os docentes da ACITE disponibilizam apoio para ajudar
+          cada estudante a alcançar o sucesso académico.
+        </p>
+        <div class="orientation-grid">
+          <article class="orientation-card">
+            <i class="fa-solid fa-compass" aria-hidden="true"></i>
+            <div>
+              <h3>ACITE Open Day</h3>
+              <p>
+                Semana de acolhimento e orientação para novos estudantes, com
+                apresentação da Academia, da vida académica e das expectativas
+                do percurso.
+              </p>
+            </div>
+          </article>
+          <article class="orientation-card">
+            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+            <div>
+              <h3>OMIC — Oficina de Metodologia de Investigação Científica</h3>
+              <p>
+                A OMIC presta aconselhamento académico-científico e apoio ao
+                desenvolvimento de projetos de investigação, dissertações e
+                teses.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="contact-band" aria-label="Contactar a Secretaria Académica">
+        <div>
+          <h2>Precisa de apoio?</h2>
+          <p>
+            A Secretaria Académica pode ajudar com questões sobre o seu percurso
+            na ACITE.
+          </p>
+        </div>
+        <a href="mailto:s.academia@acite.ao"
+          ><i class="fa-regular fa-envelope" aria-hidden="true"></i> Contactar a
+          Secretaria</a
+        >
+      </aside>
+    </main>
+    <footer class="site-footer">
+      <p>© 2026 ACITE. Todos os direitos reservados.</p>
+      <p><a href="../../index.html">Voltar à página inicial</a></p>
+    </footer>
+    
+  </body>
+</html>
