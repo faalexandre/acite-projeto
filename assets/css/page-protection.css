@@ -1,2 +1,8 @@
 body { -webkit-user-select: none; user-select: none; }
 input, textarea, [contenteditable]:not([contenteditable="false"]) { -webkit-user-select: text; user-select: text; }
+.faculty-photo-input, .faculty-photo-area label, .publication-image-input,
+.publication-image-action, #profile-photo-file, #add-author-card,
+.work-cover-card input[type="file"], .course-video-upload,
+.strategic-video input[type="file"], .strategic-video > p { display: none !important; }
+.faculty-photo-placeholder, .author-photo-area, .work-photo-area,
+#profile-photo, .investigation-cover, .cover-change { cursor: default !important; }
