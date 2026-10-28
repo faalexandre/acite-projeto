@@ -1136,11 +1136,28 @@ main {
   .timeline-entry, .timeline-entry .timeline-card, .timeline-entry .works-details { transition: none; }
 }
 .timeline .timeline-entry.has-multiple-covers { grid-column: 1 / -1; }
+.timeline .timeline-entry[hidden] { display: none !important; }
+.timeline .timeline-entry { align-self: start; }
+.timeline.has-research-route.author-filtered { grid-template-columns: minmax(0, 1fr); }
+.timeline.author-filtered .timeline-entry { max-width: 560px; justify-self: center; }
+.timeline.author-filtered .timeline-entry.has-multiple-covers { max-width: none; }
 .timeline .timeline-entry.has-multiple-covers .timeline-card { aspect-ratio: auto; min-height: 680px; }
 .has-multiple-covers .works-section .works-grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 240px));
+  justify-content: center;
+  width: min(100%, 760px);
+  margin-inline: auto;
   height: auto;
-  gap: 1.5rem;
+  gap: .5rem;
+}
+.investigation-cover img.is-loaded {
+  border: 1px solid rgba(74, 135, 193, .3);
+  border-radius: 6px;
+  padding: 3px;
+  background: rgba(222, 237, 252, .22);
+  box-shadow: 0 2px 10px rgba(40, 100, 170, .08), inset 0 0 0 1px rgba(255, 255, 255, .6);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 .has-multiple-covers .works-grid .investigation-cover { height: 340px; }
 .timeline.has-research-route {
@@ -1184,8 +1201,11 @@ main {
   box-shadow: 0 0 0 1px #2864aa, 0 0 0 5px #2864aa0c;
 }
 .has-research-route .timeline-card { border-top-width: 2px; border-radius: 8px; }
+.has-research-route.scroll-return .below-reading-line .timeline-card { opacity: .45; }
+.has-research-route.scroll-return .below-reading-line .timeline-card:hover,
+.has-research-route.scroll-return .below-reading-line .timeline-card:focus-within { opacity: 1; }
 @media (prefers-reduced-motion: no-preference) {
-  .has-research-route .timeline-card { transition: border-color .3s, box-shadow .3s, transform .3s; }
+  .has-research-route .timeline-card { transition: opacity .4s ease, border-color .3s, box-shadow .3s, transform .3s; }
   .has-research-route .timeline-card:hover { transform: translateY(-3px); }
 }
 @media (max-width: 640px) {
@@ -1194,6 +1214,6 @@ main {
 }
 @media (max-width: 640px) {
   .timeline .timeline-entry.has-multiple-covers .timeline-card { min-height: 0; }
-  .has-multiple-covers .works-section .works-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+  .has-multiple-covers .works-section .works-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .4rem; }
   .has-multiple-covers .works-grid .investigation-cover { height: 220px; }
 }

@@ -37,7 +37,23 @@
   });
   [...names].sort((a, b) => a[0].localeCompare(b[0], 'pt'))
     .forEach(([name, id]) => selector.add(new Option(name, id)));
-  selector.addEventListener('change', () => { createButton.disabled = !selector.value; });
+  selector.options[0].textContent = 'Todos os autores';
+  selector.addEventListener('change', () => {
+    createButton.disabled = !selector.value;
+    const selectedName = selector.value ? selector.selectedOptions[0].textContent.trim() : null;
+    timeline.querySelectorAll('.timeline-entry').forEach(entry => {
+      const name = entry.querySelector('.author-name').textContent.trim();
+      entry.hidden = Boolean(selectedName && name !== selectedName);
+      if (!entry.hidden) {
+        entry.classList.remove('reveal-pending');
+        entry.classList.add('is-visible');
+      }
+    });
+    timeline.classList.toggle('author-filtered', Boolean(selectedName));
+    timeline.classList.remove('scroll-return');
+    feedback.textContent = '';
+    document.dispatchEvent(new CustomEvent('investigacao:filter-changed'));
+  });
   const coverPicker = document.createElement('input');
   coverPicker.type = 'file';
   coverPicker.accept = 'image/*';

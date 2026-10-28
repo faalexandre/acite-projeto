@@ -18,9 +18,10 @@
   let length = 0;
   let pending = false;
   let needsLayout = true;
+  let previousScrollY = window.scrollY;
   function draw() {
     const bounds = timeline.getBoundingClientRect();
-    const entries = [...timeline.querySelectorAll('.timeline-entry')];
+    const entries = [...timeline.querySelectorAll('.timeline-entry')].filter(entry => !entry.hidden);
     const points = entries.map(entry => {
       const card = entry.querySelector('.timeline-card');
       return { x: entry.offsetLeft + card.offsetLeft + card.offsetWidth / 2, y: entry.offsetTop + card.offsetTop - 30 };
@@ -54,6 +55,12 @@
   }
   function update() {
     pending = false;
+    const currentScrollY = window.scrollY;
+    if (Math.abs(currentScrollY - previousScrollY) >= 2) {
+      timeline.classList.toggle('scroll-return', currentScrollY > 0 && currentScrollY < previousScrollY);
+      previousScrollY = currentScrollY;
+    }
+    if (currentScrollY === 0) timeline.classList.remove('scroll-return');
     if (needsLayout) { draw(); needsLayout = false; }
     if (!length) return;
     const bounds = timeline.getBoundingClientRect();
@@ -67,8 +74,10 @@
     }
     paths[3].style.strokeDashoffset = String(1 - low / length);
     timeline.querySelectorAll('.timeline-entry').forEach(entry => {
+      if (entry.hidden) return;
       const card = entry.querySelector('.timeline-card').getBoundingClientRect();
       entry.classList.toggle('route-reached', card.top - 30 <= window.innerHeight * .62);
+      entry.classList.toggle('below-reading-line', card.top + card.height / 2 > window.innerHeight * .62);
     });
   }
   function schedule(layout = false) {
@@ -80,6 +89,7 @@
   window.addEventListener('scroll', () => schedule(), { passive: true });
   window.addEventListener('resize', () => schedule(true));
   window.addEventListener('load', () => schedule(true));
+  document.addEventListener('investigacao:filter-changed', () => schedule(true));
   if (document.fonts) document.fonts.ready.then(() => schedule(true));
   if ('ResizeObserver' in window) new ResizeObserver(() => schedule(true)).observe(timeline);
   const observer = new MutationObserver(records => {
