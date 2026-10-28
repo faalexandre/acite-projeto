@@ -18,6 +18,8 @@
   <script src="perfil-raul-araujo.js" defer></script>
   <link rel="stylesheet" href="../../assets/css/page-protection.css">
   <script src="../../assets/js/page-protection.js" defer></script>
+  <link rel="stylesheet" href="../../assets/css/back-to-top.css">
+  <script src="../../assets/js/back-to-top.js" defer></script>
 </head>
 <body>
   <div class="flex min-h-[72px] flex-wrap items-center justify-center gap-x-6 gap-y-2 bg-[#0d1832] px-5 py-4 text-sm text-white md:justify-end md:px-8">
@@ -141,14 +143,9 @@
         </div>
       </details>
     </section>
-    <section class="works-section" aria-labelledby="works-title">
-      <h2 id="works-title">Obras</h2>
-      <p class="profile-note">Adicione as imagens de capa das obras deste autor.</p>
-      <button class="works-upload" id="works-upload" type="button"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Adicionar capas</button>
-      <input id="works-files" type="file" accept="image/*" multiple hidden>
-      <p id="works-status" class="profile-note" role="status" aria-live="polite"></p>
-      <div class="works-grid" id="works-grid"></div>
-    </section>
+    <div class="works-section profile-publications-link">
+      <a class="works-upload" href="../autor-publicacao/index.html"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Ver autores e obras publicadas</a>
+    </div>
   </main>
   <footer class="border-t border-gray-200 bg-gray-50 px-6 py-8 text-center text-sm text-gray-600">
     <p>© 2026 ACITE. Todos os direitos reservados.</p>
