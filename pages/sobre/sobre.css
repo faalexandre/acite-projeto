@@ -124,7 +124,24 @@
 }
 .timeline-top:hover { background: var(--blue); }
 .timeline-top:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+.pillar-sequence.scrolling-up .pillar-stop article {
+  background: rgba(255, 255, 255, .38);
+  border-color: rgba(255, 255, 255, .75);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 24px rgba(27, 42, 74, .07), inset 0 1px 0 rgba(255, 255, 255, .8);
+}
+.pillar-sequence.scrolling-up .pillar-stop article :is(h3, h4, p, .pillar-category) {
+  opacity: .55;
+}
+.pillar-sequence.scrolling-up .pillar-stop article:hover :is(h3, h4, p, .pillar-category) {
+  opacity: 1;
+}
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
   .timeline-top { transition: background-color .2s, box-shadow .2s; }
+  .pillar-stop article {
+    transition: opacity .7s ease, transform .7s cubic-bezier(.22, 1, .36, 1), background-color .35s ease, border-color .35s ease, box-shadow .35s ease;
+  }
+  .pillar-stop article :is(h3, h4, p, .pillar-category) { transition: opacity .35s ease; }
 }

@@ -1,5 +1,7 @@
 
 (() => {
+  const pillarSequence = document.querySelector('.pillar-sequence');
+  let previousScrollY = window.scrollY;
   const routes = [...document.querySelectorAll('.pillar-journey')].map(journey => {
     const path = journey.querySelector('.route-progress');
     return { journey, path, length: path.getTotalLength(), stops: [...journey.querySelectorAll('.pillar-stop')] };
@@ -30,6 +32,12 @@
     if (document.fonts) document.fonts.ready.then(() => { layoutConnector(); scheduleProgress(); });
   }
   function updateProgress() {
+    const currentScrollY = window.scrollY;
+    if (pillarSequence && Math.abs(currentScrollY - previousScrollY) >= 2) {
+      pillarSequence.classList.toggle('scrolling-up', currentScrollY > 0 && currentScrollY < previousScrollY);
+      previousScrollY = currentScrollY;
+    }
+    if (pillarSequence && currentScrollY === 0) pillarSequence.classList.remove('scrolling-up');
     const readingLine = window.innerHeight * .65;
     routes.forEach(({ journey, path, length, stops }) => {
       const svg = path.ownerSVGElement;
