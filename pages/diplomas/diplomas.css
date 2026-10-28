@@ -8,7 +8,7 @@
     .hero { display: grid; min-height: 250px; place-items: center; padding: 2rem 1.25rem; background: linear-gradient(90deg, rgba(13,24,50,.78), rgba(13,24,50,.45)), url('../../assets/img/banner-acite.png') center/cover; color: #fff; text-align: center; }
     h1, h2, h3 { font-family: 'Noto Serif', serif; }
     h1 { margin: 0; font-size: clamp(2rem, 5vw, 3rem); }
-    .breadcrumb { padding-top: .8rem; padding-bottom: .8rem; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+    .breadcrumb { padding: 1.1rem max(1.25rem, calc((100% - 1120px) / 2)); border-bottom: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
     .breadcrumb a { text-decoration: none; }
     main { max-width: 1120px; padding-top: 2.5rem; padding-bottom: 3.5rem; }
     .content { width: 100%; max-width: 960px; margin: 0 auto; }

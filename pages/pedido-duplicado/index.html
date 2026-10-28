@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prepare o seu pedido de duplicado de diploma à ACITE.">
+  <title>Pedido de duplicado de diploma — ACITE</title>
+  <link rel="stylesheet" href="../diplomas/diplomas.css">
+  <link rel="stylesheet" href="pedido-duplicado.css">
+  <script src="pedido-duplicado.js" defer></script>
+</head>
+<body>
+  <header><a href="../../index.html">ACITE</a><a href="../estudantes/index.html">Estudantes</a></header>
+  <section class="hero"><h1>Pedido de duplicado de diploma</h1></section>
+  <main>
+    <a href="../diplomas/index.html">← Voltar ao levantamento de diplomas</a>
+    <div class="intro"><h2>Dados do requerente e motivo do pedido</h2><p>Preencha os campos obrigatórios (*) e seleccione os documentos de apoio. No final, poderá rever o pedido e abrir um email para a instituição.</p></div>
+    <form id="request-form">
+      <fieldset><legend>1. Dados pessoais</legend><div class="fields">
+        <label>Nome completo *<input name="nome" autocomplete="name" maxlength="160" required></label>
+        <label>Número do BI ou passaporte *<input name="identificacao" maxlength="50" required></label>
+        <label>Email *<input name="email" type="email" autocomplete="email" maxlength="200" required></label>
+        <label>Telefone *<input name="telefone" type="tel" autocomplete="tel" maxlength="40" required></label>
+      </div></fieldset>
+      <fieldset><legend>2. Dados académicos</legend><div class="fields">
+        <label>Curso concluído *<input name="curso" maxlength="200" required></label>
+        <label>Número de estudante<input name="estudante" maxlength="50"></label>
+        <label>Ano de conclusão *<input name="ano" type="number" min="1900" required></label>
+        <label>Número do diploma (se conhecido)<input name="diploma" maxlength="80"></label>
+      </div></fieldset>
+      <fieldset><legend>3. Motivo e justificativo</legend>
+        <label>Motivo do pedido *<select name="motivo" id="reason" required><option value="">Seleccione o motivo</option><option>Diploma danificado ou ilegível</option><option>Destruição</option><option>Perda</option><option>Roubo</option><option>Outro</option></select></label>
+        <label>Descrição e justificação do pedido *<textarea name="justificacao" rows="5" minlength="20" maxlength="4000" required placeholder="Explique o que aconteceu e a razão pela qual necessita de um duplicado."></textarea></label>
+        <p id="reason-help">Seleccione o motivo para consultar o justificativo a apresentar.</p>
+        <label>Cópia do BI ou passaporte *<input name="documento" type="file" accept=".pdf,.jpg,.jpeg,.png" required></label>
+        <label>Documento justificativo *<input name="justificativo" type="file" accept=".pdf,.jpg,.jpeg,.png" required></label>
+        <p class="hint">PDF, JPG ou PNG, até 10 MB por ficheiro. Os ficheiros seleccionados não são enviados nem anexados automaticamente. Anexe-os ao email antes de o enviar.</p>
+      </fieldset>
+      <label class="consent"><input type="checkbox" required> Confirmo que os dados e a justificação apresentados são verdadeiros. *</label>
+      <p id="status" role="status" aria-live="polite"></p>
+      <button type="submit">Rever pedido</button>
+    </form>
+    <section id="review" hidden aria-labelledby="review-title">
+      <h2 id="review-title" tabindex="-1">Reveja o seu pedido</h2>
+      <pre id="request-summary"></pre>
+      <p><strong>O pedido ainda não foi enviado.</strong> Abra o email para s.academia@acite.ao, anexe a identificação e o justificativo seleccionados e envie a mensagem. Pode também descarregar os dados do pedido.</p>
+      <div class="actions"><button id="open-email" type="button">Abrir email para a instituição</button><button id="download" type="button">Descarregar pedido</button><button id="edit" type="button">Editar dados</button></div>
+    </section>
+  </main>
+  <footer><p>ACITE · Serviços académicos</p><a href="mailto:s.academia@acite.ao">s.academia@acite.ao</a></footer>
+</body>
+</html>

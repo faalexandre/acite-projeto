@@ -1,3 +1,13 @@
+.calendar-sidebar .sidebar-return { margin-top: 1.75rem; }
+@media (min-width: 651px) {
+  .calendar-sidebar {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}
 /* === Variáveis e Reset === */
     :root {
       --primary: #1B2A4A;      /* Azul escuro institucional */
