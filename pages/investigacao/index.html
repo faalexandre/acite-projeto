@@ -27,7 +27,9 @@
   
 
   <link rel="stylesheet" href="investigacao.css">
+  <script src="investigacao-cards.js" defer></script>
   <script src="investigacao.js" defer></script>
+  <script src="investigacao-timeline.js" defer></script>
   <link rel="stylesheet" href="../../assets/css/page-protection.css">
   <script src="../../assets/js/page-protection.js" defer></script>
   <link rel="stylesheet" href="../../assets/css/back-to-top.css">
@@ -64,6 +66,13 @@
       <p class="intro">
         Conheça os autores e as obras publicadas apresentadas pela ACITE.
       </p>
+      <div class="timeline-controls">
+        <label for="author-selector">Seleccionar autor
+          <select id="author-selector"><option value="">Seleccione um autor</option></select>
+        </label>
+        <button id="add-author-card" type="button" disabled>+ Adicionar capa</button>
+      </div>
+      <p id="author-card-feedback" role="status" aria-live="polite"></p>
       <section
         class="timeline"
         aria-label="Timeline de autores e obras publicadas"

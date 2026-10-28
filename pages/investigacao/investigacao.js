@@ -37,14 +37,19 @@
   request.onsuccess = () => resolve(request.result);
   request.onerror = () => resolve([]);
  }) : []);
- document.querySelectorAll('.timeline-card').forEach(async profile => {
+ async function initializeCover(profile, newFile = null) {
   const author = 'investigacao-' + profile.id;
   const name = profile.querySelector('.author-name').textContent.trim();
   const grid = profile.querySelector('[data-works-grid]');
   const status = profile.querySelector('[data-works-status]');
   const covers = (await loaded).filter(cover => cover.author === author).slice(0, 1);
-  for (let index = 0; index < 1; index++) {
-   let cover = covers[index] || { id: author + '-slot-' + index, author };
+  const start = grid.children.length;
+  if (!newFile && start) return;
+  const count = newFile ? start + 1 : 1;
+  if (!newFile) profile.closest('.timeline-entry').classList.remove('has-multiple-covers');
+  if (count > 1) profile.closest('.timeline-entry').classList.add('has-multiple-covers');
+  for (let index = start; index < count; index++) {
+   let cover = (!newFile && covers[index]) || { id: author + '-slot-' + crypto.randomUUID(), author };
    const card = document.createElement('div');
    card.className = 'work-cover-card';
    card.innerHTML = '<button class="investigation-cover" type="button"><i class="fa-solid fa-image" aria-hidden="true"></i></button><input type="file" accept="image/*" hidden>';
@@ -65,9 +70,7 @@
    }
    if (cover.blob instanceof Blob) show(cover.blob);
    button.addEventListener('click', () => input.click());
-   input.addEventListener('change', async () => {
-    const file = input.files[0];
-    input.value = '';
+   async function saveCover(file) {
     if (!file) return;
     if (!file.type.startsWith('image/')) { status.textContent = 'Selecione um ficheiro de imagem.'; return; }
     cover = { ...cover, blob: file, name: file.name };
@@ -85,10 +88,16 @@
     status.textContent = '';
     } catch { status.textContent = 'Capa alterada apenas nesta sessão. Não foi possível guardar.'; }
     finally { button.disabled = false; }
-   });
+   }
+   input.addEventListener('change', () => { const file = input.files[0]; input.value = ''; saveCover(file); });
    grid.append(card);
+   if (newFile) await saveCover(newFile);
   }
- });
+
+ }
+ document.querySelectorAll('.timeline-card').forEach(profile => initializeCover(profile));
+ document.addEventListener('investigacao:card-added', event => initializeCover(event.detail.card));
+ document.addEventListener('investigacao:add-cover', event => initializeCover(event.detail.card, event.detail.file));
  window.addEventListener('beforeunload', () => urls.forEach(url => URL.revokeObjectURL(url)));
 })();
 ;
@@ -180,7 +189,7 @@
         );
       }
 
-      publicationImageInputs.forEach((input) => {
+      function initializePhotoInput(input) {
         const area = imageArea(input);
         area.addEventListener("click", (event) => {
           if (event.target !== input && !event.target.closest('label'))
@@ -248,6 +257,12 @@
             );
           }
         });
+      }
+      publicationImageInputs.forEach(initializePhotoInput);
+      document.addEventListener('investigacao:card-added', event => {
+        const input = event.detail.card.querySelector('.publication-image-input');
+        publicationImageInputs.push(input);
+        initializePhotoInput(input);
       });
 
       publicationImageDatabase
