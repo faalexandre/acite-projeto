@@ -1,4 +1,29 @@
 (() => {
+ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const entries = [...document.querySelectorAll('.timeline-entry')];
+  const revealObserver = new IntersectionObserver(observations => {
+   observations.forEach(observation => {
+    if (!observation.isIntersecting) return;
+    observation.target.classList.remove('reveal-pending');
+    observation.target.classList.add('is-visible');
+    revealObserver.unobserve(observation.target);
+   });
+  }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
+  entries.forEach(entry => {
+   // Keep cards already on screen visible immediately.
+   if (entry.getBoundingClientRect().top < window.innerHeight) {
+    entry.classList.add('is-visible');
+    return;
+   }
+   entry.classList.add('reveal-pending', 'reveal-enabled');
+   revealObserver.observe(entry);
+  });
+  window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', event => {
+   if (!event.matches) return;
+   entries.forEach(entry => entry.classList.remove('reveal-pending'));
+   revealObserver.disconnect();
+  });
+ }
  const urls = new Set();
  const database = new Promise(resolve => {
   if (!window.indexedDB) return resolve(null);
@@ -17,8 +42,8 @@
   const name = profile.querySelector('.author-name').textContent.trim();
   const grid = profile.querySelector('[data-works-grid]');
   const status = profile.querySelector('[data-works-status]');
-  const covers = (await loaded).filter(cover => cover.author === author).slice(0, 2);
-  for (let index = 0; index < 2; index++) {
+  const covers = (await loaded).filter(cover => cover.author === author).slice(0, 1);
+  for (let index = 0; index < 1; index++) {
    let cover = covers[index] || { id: author + '-slot-' + index, author };
    const card = document.createElement('div');
    card.className = 'work-cover-card';
@@ -33,6 +58,7 @@
     currentUrl = URL.createObjectURL(blob);
     urls.add(currentUrl);
     const image = document.createElement('img');
+    image.addEventListener('load', () => image.classList.add('is-loaded'), { once: true });
     image.src = currentUrl;
     image.alt = cover.title || `Capa da obra de ${name}`;
     button.replaceChildren(image);
@@ -56,7 +82,7 @@
       tx.oncomplete = resolve;
       tx.onerror = tx.onabort = () => reject(tx.error);
      });
-     status.textContent = 'Capa guardada neste navegador.';
+    status.textContent = '';
     } catch { status.textContent = 'Capa alterada apenas nesta sessão. Não foi possível guardar.'; }
     finally { button.disabled = false; }
    });
@@ -157,12 +183,11 @@
       publicationImageInputs.forEach((input) => {
         const area = imageArea(input);
         area.addEventListener("click", (event) => {
-          if (area.classList.contains("has-photo") && event.target !== input)
+          if (event.target !== input && !event.target.closest('label'))
             input.click();
         });
         area.addEventListener("keydown", (event) => {
           if (
-            !area.classList.contains("has-photo") ||
             !["Enter", " "].includes(event.key)
           )
             return;
