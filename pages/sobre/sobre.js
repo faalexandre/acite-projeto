@@ -4,6 +4,31 @@
     const path = journey.querySelector('.route-progress');
     return { journey, path, length: path.getTotalLength(), stops: [...journey.querySelectorAll('.pillar-stop')] };
   });
+  const connector = document.querySelector('.journey-connector');
+  if (connector && routes.length >= 2) {
+    const connectorRoute = { path: connector.querySelector('.route-progress'), length: 0, stops: [] };
+    function layoutConnector() {
+      const bounds = connector.parentElement.getBoundingClientRect();
+      const first = routes[0].path.ownerSVGElement.getBoundingClientRect();
+      const second = routes[1].path.ownerSVGElement.getBoundingClientRect();
+      const x1 = first.left - bounds.left + first.width * .915;
+      const y1 = first.top - bounds.top + first.height * 620 / 690;
+      const x2 = second.left - bounds.left + second.width * .085;
+      const y2 = second.top - bounds.top + second.height * 110 / 1190;
+      const bend = first.bottom - bounds.top + 16;
+      const right = bounds.width * .975;
+      const left = bounds.width * .025;
+      const d = `M ${x1} ${y1} C ${right} ${y1} ${right} ${bend} ${right - 24} ${bend} L ${left + 24} ${bend} C ${left} ${bend} ${left} ${y2} ${x2} ${y2}`;
+      connector.setAttribute('viewBox', `0 0 ${bounds.width} ${bounds.height}`);
+      connector.querySelectorAll('path').forEach(path => path.setAttribute('d', d));
+      connectorRoute.length = connectorRoute.path.getTotalLength();
+    }
+    layoutConnector();
+    routes.push(connectorRoute);
+    window.addEventListener('resize', layoutConnector);
+    window.addEventListener('load', layoutConnector);
+    if (document.fonts) document.fonts.ready.then(() => { layoutConnector(); scheduleProgress(); });
+  }
   function updateProgress() {
     const readingLine = window.innerHeight * .65;
     routes.forEach(({ journey, path, length, stops }) => {

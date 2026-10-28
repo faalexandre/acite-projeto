@@ -96,3 +96,12 @@
 .value-stop article { width: min(100%, 440px); padding: .7rem 1rem; }
 .value-stop h4 { margin: 0; color: var(--navy); font-family: 'Noto Serif', serif; font-size: clamp(1rem, 2vw, 1.2rem); }
 .value-stop .pillar-marker { top: 110px; }
+.pillar-sequence { position: relative; display: flow-root; }
+.pillar-sequence { text-align: center; }
+.pillar-sequence h2,
+.pillar-sequence h3,
+.pillar-sequence h4,
+.pillar-sequence p,
+.pillar-category { text-align: center; }
+.pillar-sequence .journey-connector { z-index: 2; pointer-events: none; }
+.journey-connector path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
