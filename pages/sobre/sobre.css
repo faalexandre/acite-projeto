@@ -105,3 +105,26 @@
 .pillar-category { text-align: center; }
 .pillar-sequence .journey-connector { z-index: 2; pointer-events: none; }
 .journey-connector path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.timeline-top {
+  position: absolute;
+  left: 83%;
+  top: 94.958%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px #c9d5e5, 0 4px 12px #1b2a4a20;
+  z-index: 3;
+}
+.timeline-top:hover { background: var(--blue); }
+.timeline-top:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .timeline-top { transition: background-color .2s, box-shadow .2s; }
+}
