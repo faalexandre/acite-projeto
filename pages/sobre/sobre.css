@@ -79,6 +79,71 @@
   .pillar-stop.reveal-pending article { opacity: 0; transform: translateY(18px); }
   .pillar-marker { transition: background-color .6s ease; }
 }
+
+/* Timeline mais clara, com cartões de leitura confortável e percurso discreto. */
+.pillar-journey {
+  overflow: hidden;
+  border: 1px solid #dce5f0;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f8faff, #f1f5fa);
+  box-shadow: 0 18px 48px rgba(27, 42, 74, .08);
+}
+.route-edge { stroke: #d5dfed; stroke-width: 25; }
+.route-surface { stroke: #f8faff; stroke-width: 19; }
+.route-centre { stroke: #9aacc5; stroke-width: 1.5; stroke-dasharray: 3 9; }
+.route-progress { stroke: #2864aa; stroke-width: 3; }
+.pillar-stop article {
+  padding: 1rem 1.4rem;
+  border: 1px solid #e1e8f1;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(27, 42, 74, .09);
+}
+.pillar-category { font-size: .68rem; }
+.pillar-stop h3 { font-size: clamp(1.05rem, 2vw, 1.35rem); }
+.pillar-stop p { font-size: .88rem; }
+.pillar-marker {
+  width: 44px;
+  height: 44px;
+  border: 4px solid #fff;
+  background: #203b68;
+  box-shadow: 0 0 0 2px #aebed3, 0 5px 14px rgba(27, 42, 74, .18);
+}
+.pillar-stop.is-reached .pillar-marker { background: var(--red); box-shadow: 0 0 0 3px rgba(200, 16, 46, .2); }
+.values-journey { max-width: 900px; margin: 0 auto; }
+.value-stop article { width: min(100%, 480px); padding: .9rem 1.25rem; }
+.value-stop h4 { font-size: clamp(1.05rem, 2vw, 1.3rem); }
+.timeline-start, .timeline-top {
+  width: 54px;
+  height: 54px;
+  border: 3px solid #fff;
+  background: #203b68;
+  box-shadow: 0 0 0 2px #aebed3, 0 6px 18px rgba(27, 42, 74, .2);
+}
+.timeline-start { font-size: .72rem; }
+.timeline-start:hover, .timeline-top:hover { background: var(--blue); }
+@media (max-width: 600px) {
+  .pillar-journey { border-radius: 16px; }
+  .pillar-stops { grid-template-rows: repeat(3, 230px); padding-bottom: 20px; }
+  .values-stops { grid-template-rows: repeat(7, 150px); padding-bottom: 0; }
+  .pillar-stop { padding: 20px 16%; }
+  .pillar-stop article { width: 100%; padding: .85rem .8rem; }
+  .pillar-stop h3 { font-size: 1rem; }
+  .pillar-stop p { font-size: .78rem; line-height: 1.55; }
+  .route-edge { stroke-width: 34; }
+  .route-surface { stroke-width: 27; }
+  .pillar-marker { width: 42px; height: 42px; }
+  .value-stop { padding-top: 20px; }
+  .value-stop article { width: min(100%, 360px); padding: .8rem .75rem; }
+  .value-stop .pillar-marker { top: 100px; }
+  .timeline-start { left: 8.5%; }
+  .timeline-top { left: 83%; }
+}
+@media (max-width: 380px) {
+  .pillar-stop { padding-right: 14%; padding-left: 14%; }
+  .pillar-stop article { padding: .75rem .65rem; }
+  .pillar-stop p { font-size: .75rem; }
+  .timeline-start, .timeline-top { width: 46px; height: 46px; }
+}
 @media (max-width: 600px) {
   .pillar-stop { padding: 20px 12%; }
   .pillar-stop article { padding: .65rem .6rem; }
