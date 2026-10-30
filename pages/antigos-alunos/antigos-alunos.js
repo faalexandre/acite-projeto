@@ -24,6 +24,15 @@
   const courseFilter = document.querySelector('#course-filter');
   const galleryCount = document.querySelector('#gallery-count');
   const alumniCards = [...document.querySelectorAll('.alumni-card')];
+  const alumniViewport = document.querySelector('#alumni-viewport');
+  const galleryPrevious = document.querySelector('[data-gallery-prev]');
+  const galleryNext = document.querySelector('[data-gallery-next]');
+  const galleryCurrent = document.querySelector('[data-gallery-current]');
+  const galleryTotal = document.querySelector('[data-gallery-total]');
+  let galleryAnimationFrame = null;
+  let galleryPreviousFrame = 0;
+  let galleryClones = [];
+  let galleryPaused = false;
   const courseNames = { mestrado: 'Mestrado', doutoramento: 'Doutoramento', especializacao: 'Especialização', linguas: 'Línguas' };
   alumniCards.forEach(card => {
     const course = document.createElement('span');
@@ -39,8 +48,75 @@
       card.hidden = !visible;
       if (visible) visibleCount++;
     });
+    galleryClones.forEach(clone => { clone.hidden = selectedCourse !== 'all' && clone.dataset.course !== selectedCourse; });
     galleryCount.innerHTML = `<b>${visibleCount}</b> ${visibleCount === 1 ? 'perfil' : 'perfis'}`;
+    galleryTotal.textContent = String(visibleCount).padStart(2, '0');
+    alumniViewport.scrollTo({ left: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+    updateGalleryControls();
+    startGalleryAutoplay();
   });
+  function updateGalleryControls() {
+    if (!alumniViewport) return;
+    const visibleCards = alumniCards.filter(card => !card.hidden);
+    const viewportLeft = alumniViewport.getBoundingClientRect().left;
+    let activeIndex = 0;
+    let smallestDistance = Infinity;
+    visibleCards.forEach((card, index) => {
+      const rect = card.getBoundingClientRect();
+      const distance = Math.abs(rect.left - viewportLeft);
+      if (distance < smallestDistance) { smallestDistance = distance; activeIndex = index; }
+    });
+    galleryCurrent.textContent = String(visibleCards.length ? activeIndex + 1 : 0).padStart(2, '0');
+    galleryTotal.textContent = String(visibleCards.length).padStart(2, '0');
+    galleryPrevious.disabled = alumniViewport.scrollLeft <= 2;
+    galleryNext.disabled = alumniViewport.scrollLeft + alumniViewport.clientWidth >= alumniViewport.scrollWidth - 2;
+  }
+  function moveGallery(direction) {
+    const visibleCards = alumniCards.filter(card => !card.hidden);
+    if (!visibleCards.length) return;
+    const centeredCard = visibleCards.reduce((closest, card) => {
+      const viewportCenter = alumniViewport.getBoundingClientRect().left + alumniViewport.clientWidth / 2;
+      return Math.abs(card.getBoundingClientRect().left + card.offsetWidth / 2 - viewportCenter) < Math.abs(closest.getBoundingClientRect().left + closest.offsetWidth / 2 - viewportCenter) ? card : closest;
+    }, visibleCards[0]);
+    const target = visibleCards[Math.max(0, Math.min(visibleCards.length - 1, visibleCards.indexOf(centeredCard) + direction))];
+    const targetLeft = alumniViewport.scrollLeft + target.getBoundingClientRect().left - alumniViewport.getBoundingClientRect().left;
+    alumniViewport.scrollTo({ left: targetLeft, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+  }
+  function startGalleryAutoplay() {
+    if (galleryAnimationFrame) cancelAnimationFrame(galleryAnimationFrame);
+    galleryAnimationFrame = null;
+    galleryPreviousFrame = 0;
+    if (galleryPaused || reduceMotion.matches || alumniCards.filter(card => !card.hidden).length < 2) return;
+    const animate = timestamp => {
+      if (!galleryPreviousFrame) galleryPreviousFrame = timestamp;
+      const elapsed = Math.min(40, timestamp - galleryPreviousFrame);
+      galleryPreviousFrame = timestamp;
+      const firstClone = galleryClones.find(clone => !clone.hidden);
+      const firstCard = alumniCards.find(card => !card.hidden);
+      if (firstClone && firstCard && !galleryPaused) {
+        const loopDistance = firstClone.offsetLeft - firstCard.offsetLeft;
+        if (loopDistance > alumniViewport.clientWidth) {
+          alumniViewport.scrollLeft += elapsed * .075;
+          if (alumniViewport.scrollLeft >= loopDistance) alumniViewport.scrollLeft -= loopDistance;
+        }
+      }
+      galleryAnimationFrame = requestAnimationFrame(animate);
+    };
+    galleryAnimationFrame = requestAnimationFrame(animate);
+  }
+  galleryPrevious?.addEventListener('click', () => { moveGallery(-1); startGalleryAutoplay(); });
+  galleryNext?.addEventListener('click', () => { moveGallery(1); startGalleryAutoplay(); });
+  alumniViewport?.addEventListener('scroll', updateGalleryControls, { passive: true });
+  alumniViewport?.addEventListener('mouseenter', () => { galleryPaused = true; startGalleryAutoplay(); });
+  alumniViewport?.addEventListener('mouseleave', () => { galleryPaused = false; startGalleryAutoplay(); });
+  alumniViewport?.addEventListener('focusin', () => { galleryPaused = true; startGalleryAutoplay(); });
+  alumniViewport?.addEventListener('focusout', event => {
+    if (!alumniViewport.contains(event.relatedTarget)) { galleryPaused = false; startGalleryAutoplay(); }
+  });
+  alumniViewport?.addEventListener('touchstart', () => { galleryPaused = true; startGalleryAutoplay(); }, { passive: true });
+  alumniViewport?.addEventListener('touchend', () => { galleryPaused = false; startGalleryAutoplay(); }, { passive: true });
+  window.addEventListener('resize', updateGalleryControls);
+  updateGalleryControls();
 
   function showSlide(index) {
     current = (index + slides.length) % slides.length;
@@ -168,5 +244,17 @@
       reader.readAsDataURL(file);
     });
   });
+  const alumniGrid = document.querySelector('#alumni-grid');
+  galleryClones = alumniCards.map(card => {
+    const clone = card.cloneNode(true);
+    clone.classList.add('alumni-card-clone');
+    clone.setAttribute('aria-hidden', 'true');
+    clone.inert = true;
+    clone.removeAttribute('data-reveal');
+    alumniGrid.append(clone);
+    return clone;
+  });
+  updateGalleryControls();
+  startGalleryAutoplay();
   showSlide(0);
 })();

@@ -90,7 +90,9 @@
         </select><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></div>
         <span class="gallery-count" id="gallery-count" aria-live="polite"><b>10</b> perfis</span>
       </div>
-      <div class="alumni-grid section-wrap" id="alumni-grid">
+      <div class="alumni-carousel section-wrap">
+        <div class="alumni-viewport" id="alumni-viewport">
+          <div class="alumni-grid" id="alumni-grid" aria-live="polite">
         <article class="alumni-card" data-photo-id="01" data-course="mestrado"><label class="alumni-photo" tabindex="0" role="button" aria-label="Adicionar ou alterar fotografia do perfil 1"><img alt="Fotografia do antigo aluno 1" loading="lazy"><span class="photo-placeholder"><i class="fa-regular fa-image" aria-hidden="true"></i><span>Adicionar fotografia</span></span><input class="alumni-photo-input" type="file" accept="image/*" tabindex="-1" aria-hidden="true"></label><div class="alumni-card-copy"><span>ACITE · Antigos alunos</span><h3>Perfil de antigo aluno</h3></div><span class="alumni-card-number">01</span></article>
         <article class="alumni-card" data-photo-id="02" data-course="doutoramento"><label class="alumni-photo" tabindex="0" role="button" aria-label="Adicionar ou alterar fotografia do perfil 2"><img alt="Fotografia da antiga aluna 2" loading="lazy"><span class="photo-placeholder"><i class="fa-regular fa-image" aria-hidden="true"></i><span>Adicionar fotografia</span></span><input class="alumni-photo-input" type="file" accept="image/*" tabindex="-1" aria-hidden="true"></label><div class="alumni-card-copy"><span>ACITE · Antigos alunos</span><h3>Perfil de antiga aluna</h3></div><span class="alumni-card-number">02</span></article>
         <article class="alumni-card" data-photo-id="03" data-course="especializacao"><label class="alumni-photo" tabindex="0" role="button" aria-label="Adicionar ou alterar fotografia do perfil 3"><img alt="Fotografia do antigo aluno 3" loading="lazy"><span class="photo-placeholder"><i class="fa-regular fa-image" aria-hidden="true"></i><span>Adicionar fotografia</span></span><input class="alumni-photo-input" type="file" accept="image/*" tabindex="-1" aria-hidden="true"></label><div class="alumni-card-copy"><span>ACITE · Antigos alunos</span><h3>Perfil de antigo aluno</h3></div><span class="alumni-card-number">03</span></article>
@@ -101,6 +103,13 @@
         <article class="alumni-card" data-photo-id="08" data-course="linguas"><label class="alumni-photo" tabindex="0" role="button" aria-label="Adicionar ou alterar fotografia do perfil 8"><img alt="Fotografia da antiga aluna 8" loading="lazy"><span class="photo-placeholder"><i class="fa-regular fa-image" aria-hidden="true"></i><span>Adicionar fotografia</span></span><input class="alumni-photo-input" type="file" accept="image/*" tabindex="-1" aria-hidden="true"></label><div class="alumni-card-copy"><span>ACITE · Antigos alunos</span><h3>Perfil de antiga aluna</h3></div><span class="alumni-card-number">08</span></article>
         <article class="alumni-card" data-photo-id="09" data-course="mestrado"><label class="alumni-photo" tabindex="0" role="button" aria-label="Adicionar ou alterar fotografia do perfil 9"><img alt="Fotografia do antigo aluno 9" loading="lazy"><span class="photo-placeholder"><i class="fa-regular fa-image" aria-hidden="true"></i><span>Adicionar fotografia</span></span><input class="alumni-photo-input" type="file" accept="image/*" tabindex="-1" aria-hidden="true"></label><div class="alumni-card-copy"><span>ACITE · Antigos alunos</span><h3>Perfil de antigo aluno</h3></div><span class="alumni-card-number">09</span></article>
         <article class="alumni-card" data-photo-id="10" data-course="especializacao"><label class="alumni-photo" tabindex="0" role="button" aria-label="Adicionar ou alterar fotografia do perfil 10"><img alt="Fotografia da antiga aluna 10" loading="lazy"><span class="photo-placeholder"><i class="fa-regular fa-image" aria-hidden="true"></i><span>Adicionar fotografia</span></span><input class="alumni-photo-input" type="file" accept="image/*" tabindex="-1" aria-hidden="true"></label><div class="alumni-card-copy"><span>ACITE · Antigos alunos</span><h3>Perfil de antiga aluna</h3></div><span class="alumni-card-number">10</span></article>
+          </div>
+        </div>
+        <div class="alumni-carousel-controls" aria-label="Controlos da galeria">
+          <span class="carousel-position" aria-live="polite"><b data-gallery-current>01</b><i>/</i><span data-gallery-total>10</span></span>
+          <button type="button" data-gallery-prev aria-label="Ver aluno anterior"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+          <button type="button" data-gallery-next aria-label="Ver aluno seguinte"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+        </div>
       </div>
     </section>
   </main>
