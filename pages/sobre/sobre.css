@@ -1,4 +1,4 @@
-:root { --navy: #1b2a4a; --navy-dark: #0d1832; --blue: #2864aa; --red: #c8102e; --text: #344253; --muted: #687789; --line: #e5e7eb; --pale: #f7f8fa; }
+﻿:root { --navy: #1b2a4a; --navy-dark: #0d1832; --blue: #2864aa; --red: #c8102e; --text: #344253; --muted: #687789; --line: #e5e7eb; --pale: #f7f8fa; }
     * { box-sizing: border-box; }
     body { margin: 0; color: var(--text); font-family: 'Noto Sans', sans-serif; line-height: 1.7; }
     h1, h2, h3 { font-family: 'Noto Serif', serif; }
@@ -54,6 +54,96 @@
     footer a { color: var(--navy); font-weight: 700; text-decoration: none; }
     @media (max-width: 760px) { .header { flex-wrap: wrap; justify-content: center; } .nav { gap: .6rem 1rem; } .profile-grid { grid-template-columns: 1fr; } .profile-card { min-height: 0; } .pillar-list { grid-template-columns: 1fr; } .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 480px) { .utility { gap: .35rem .85rem; } .value-list { grid-template-columns: 1fr; } .quote { padding: 1.25rem; } }
+
+/* Layout responsivo da página Sobre */
+img, svg { max-width: 100%; }
+.header, main, .breadcrumb, .hero { min-width: 0; }
+.nav a, .utility a { overflow-wrap: anywhere; }
+.profile-card, .pillar-stop article, .team-member { min-width: 0; }
+.pillar-stop h3, .pillar-stop p, .value-stop h4, .team-member p { overflow-wrap: anywhere; }
+.pillar-sequence { min-width: 0; }
+.pillar-journey { min-width: 0; }
+.pillar-route { pointer-events: none; }
+
+@media (min-width: 761px) and (max-width: 1024px) {
+  .header { padding-right: 1.5rem; padding-left: 1.5rem; }
+  .nav { gap: .7rem 1rem; }
+  .nav a { font-size: .72rem; }
+  main { padding-right: 1.5rem; padding-left: 1.5rem; }
+  .profile-card { padding: 1.25rem; }
+  .pillar-stop { padding-right: 12%; padding-left: 12%; }
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .utility { gap: .5rem 1rem; padding: .65rem 1rem; text-align: center; }
+  .header { min-height: auto; flex-direction: column; gap: .5rem; padding: .75rem 1rem 1rem; }
+  .brand img { width: 68px; height: 68px; }
+  .nav { width: 100%; gap: .5rem .9rem; }
+  .nav a { padding: .35rem .15rem; font-size: .72rem; }
+  .hero { min-height: 220px; padding: 1.5rem 1.25rem; background-position: center; }
+  .breadcrumb { padding: .75rem 1.25rem; }
+  main { padding: 2.5rem 1.25rem 3rem; }
+  .profile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profile-card { min-height: 0; padding: 1.25rem; }
+  .profile-card .icon { font-size: 2.5rem; }
+  .pillar-stop { padding-right: 12%; padding-left: 12%; }
+  .pillar-stop article { width: min(100%, 620px); }
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 540px) {
+  .utility { font-size: .72rem; gap: .4rem .75rem; }
+  .header { padding-right: .85rem; padding-left: .85rem; }
+  .nav { gap: .35rem .6rem; }
+  .nav a { font-size: .66rem; }
+  .hero { min-height: 190px; }
+  .hero h1 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  main { padding: 2rem 1rem 2.5rem; }
+  .section-heading h2 { font-size: 1.55rem; }
+  .intro { font-size: .92rem; text-align: left; }
+  .profile-grid { grid-template-columns: 1fr; gap: .8rem; }
+  .profile-card { padding: 1.1rem; }
+  .profile-card p { text-align: left; }
+  .pillars { padding-top: 1.75rem; }
+  .pillars-intro { padding: 0 .5rem; }
+  .pillar-stops { grid-template-rows: repeat(3, minmax(190px, auto)); }
+  .values-stops { grid-template-rows: repeat(7, minmax(128px, auto)); }
+  .pillar-stop { padding: 18px 12%; }
+  .pillar-stop article { padding: .8rem .85rem; }
+  .pillar-stop h3 { font-size: 1rem; }
+  .pillar-stop p { font-size: .76rem; }
+  .pillar-marker { top: 82%; width: 38px; height: 38px; }
+  .value-stop { padding-top: 18px; }
+  .value-stop article { width: min(100%, 360px); padding: .75rem; }
+  .value-stop .pillar-marker { top: 73%; }
+  .route-edge { stroke-width: 24; }
+  .route-surface { stroke-width: 18; }
+  .timeline-start { left: 8%; width: 48px; height: 48px; }
+  .timeline-top { left: 92%; width: 44px; height: 44px; }
+  .values { margin: 2.5rem auto; }
+  .values > h3 { margin: 1rem .5rem 1.5rem; font-size: 1.15rem; }
+  .quote { margin: 2rem auto; padding: 1.15rem; }
+  .quote blockquote { font-size: 1.05rem; }
+  .team-grid { gap: .75rem; }
+}
+
+@media (max-width: 360px) {
+  .utility { font-size: .68rem; }
+  .nav { column-gap: .45rem; }
+  .nav a { font-size: .61rem; }
+  main { padding-right: .75rem; padding-left: .75rem; }
+  .pillar-stop { padding-right: 14%; padding-left: 14%; }
+  .pillar-stop article { padding: .7rem; }
+  .pillar-stop p { font-size: .72rem; }
+  .team-grid { grid-template-columns: 1fr; }
+  .timeline-start { left: 10%; }
+  .timeline-top { left: 90%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
 
 /* Percurso dos pilares inspirado nas curvas da Serra da Leba. */
 .pillars { padding: 2.5rem 0 0; }

@@ -1,4 +1,4 @@
-
+﻿
 (() => {
   const pillarSequence = document.querySelector('.pillar-sequence');
   let previousScrollY = window.scrollY;

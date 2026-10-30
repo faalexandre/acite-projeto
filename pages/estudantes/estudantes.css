@@ -411,6 +411,43 @@
         background: var(--navy);
         color: #fff;
       }
+      .former-students-cta {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 1.25rem;
+        overflow: hidden;
+        margin-top: 2.5rem;
+        padding: 1.35rem 1.5rem;
+        border: 1px solid #d9e2ec;
+        border-radius: 14px;
+        background: linear-gradient(110deg, #fff 0%, #f0f5fa 100%);
+        color: var(--navy);
+        text-decoration: none;
+        box-shadow: 0 8px 24px rgba(16, 35, 65, .07);
+        transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+      }
+      .former-students-cta::after {
+        position: absolute;
+        top: -65px;
+        right: 70px;
+        width: 190px;
+        height: 190px;
+        border: 1px solid rgba(40, 100, 170, .12);
+        border-radius: 50%;
+        content: "";
+        pointer-events: none;
+      }
+      .former-students-cta:hover { transform: translateY(-3px); border-color: #b7cadc; box-shadow: 0 14px 32px rgba(16, 35, 65, .12); }
+      .former-students-cta:focus-visible { outline: 3px solid #3976c5; outline-offset: 4px; }
+      .former-students-cta-icon { display: grid; width: 54px; height: 54px; place-items: center; border-radius: 15px; background: var(--navy); color: #fff; font-size: 1.25rem; }
+      .former-students-cta-copy { display: grid; gap: .2rem; }
+      .former-students-cta-kicker { color: #3976c5; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+      .former-students-cta-copy strong { font-size: 1.12rem; line-height: 1.35; }
+      .former-students-cta-copy > span:last-child { color: #64748b; font-size: .86rem; }
+      .former-students-cta-arrow { position: relative; z-index: 1; display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid #c8d5e3; border-radius: 50%; color: #2864aa; transition: transform .22s ease, background .22s ease, color .22s ease; }
+      .former-students-cta:hover .former-students-cta-arrow { transform: translateX(3px); background: var(--navy); color: #fff; }
       .contact-band h2 {
         margin: 0;
         font-size: 1.3rem;
@@ -612,6 +649,11 @@
           flex-direction: column;
           padding: 1.3rem;
         }
+        .former-students-cta { grid-template-columns: auto 1fr; gap: .85rem; padding: 1rem; }
+        .former-students-cta-icon { width: 46px; height: 46px; border-radius: 12px; }
+        .former-students-cta-copy strong { font-size: .98rem; }
+        .former-students-cta-copy > span:last-child { font-size: .8rem; }
+        .former-students-cta-arrow { grid-column: 2; justify-self: end; width: 36px; height: 36px; margin-top: -.4rem; }
       }
       @media (prefers-reduced-motion: reduce) {
         html {
